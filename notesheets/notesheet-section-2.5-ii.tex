@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 2.5 (Continuity) Part II}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+ What is a polynomial function and a rational function?
+\end{defi}
+\begin{thrm}
+  \item Every polynomial function is continuous at every point $x$.
+  \item Every rational function $f(x) = \frac{p(x)}{q(x)}$ is continuous at every point $x$ provided that $q(x) \neq 0$.
+
+  \proof Challenge!
+  \vs\vs\vs\vs\vs\vs\vs\vs\vs\vs\vs
+\end{thrm}
+\begin{ex}
+  For which values of $x$ is the function $g(x) = \frac{29x^{17} + 2x}{x^4 + 1}$ continuous?  Use interval notation.
+  \vspace{-0.5in}
+\end{ex}
+\begin{ex}
+  In 2012, the postage rates for a package weighing \(x\) ounces were given by the
+  function \[
+    f(x) =
+    \begin{cases}
+      \$1.95 & 0 < x < 4 \\
+      \$2.12 & 4 \leq x < 5 \\
+      \$2.29 & 5 \leq x < 6 \\
+      \vdots & \\
+      \$3.48 & 12 \leq x < 13 \\
+      \$3.65 & x = 13
+    \end{cases}
+  \]
+  Where is \(f(x)\) discontinuous? Throwback: what is \(\lim_{x \to
+    5^+} f(x)\)? What is \(\lim_{x \to 5^-} f(x)\)?
+  \vspace{-1in}
+\end{ex}
+\begin{thrm}[Intermediate Value Theorem]
+  If $f$ is a continuous function on a closed interval $[a,b]$ and $M$ is any number between $f(a)$ and $f(b)$, then...
+\end{thrm}
+\begin{ex}
+  Let $f$ be a continuous function on the closed interval $[-1,10]$
+  and suppose that $f(-1) > 0$ and $f(10) < 0$.  Prove that there
+  exists at least one solution to $f(x) = 0$.
+  \vspace{-1in}
+\end{ex}
+\begin{ex}
+  The oxygen content \(t\) days after organic waste has been dumped
+  into a pond is given by \[
+    f(t) =
+      100 \left( \frac{t^2 + 10t + 100}{t^2 + 20t + 100} \right)
+      \text{ percent of its normal level}
+  \]
+  Show that \(f(0) = 100\) and \(f(10) = 75\). Must the pond have been
+  at a level of \(80\%\) at some time? If so, at what time(s) was the
+  oxygen content at \(80\%\)? Finally, what is \(\lim_{t \to \infty}
+  f(t)\) and what does it represent? (If necessary, \(\sqrt{5} \approx
+  2.236\).)
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

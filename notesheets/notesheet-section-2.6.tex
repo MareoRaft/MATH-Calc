@@ -1,0 +1,61 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 2.6 (Derivatives)}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  Let \(f(x)\) be a function. We define the \de{average rate of change} of
+  \(f\) from \(a\) to \(b\) by
+\end{defi}
+\begin{ex}
+  At time \(t = 0\), a car traveling in a straight line  at \(15\) m/s
+  (roughly \(34\)mph)
+  starts accelerating at \(5\) m/s/s (roughly \(11\) mph/s). The
+  position of the car is modeled by \[
+    x(t) = 2.5 t^2 + 15 t
+  \]
+  What is the average rate of change of \(x(t)\) from \(t=1\) to
+  \(t=2\)? What about the average rate of change of \(x(t)\) from
+  \(t=1\) to \(t= 1.0001 = (1 + 0.0001)\)?
+\end{ex}
+\begin{defi}
+  Given \(f(x)\), we define the \de{derivative of \(f(x)\)} at \(x = a\) as
+\end{defi}
+\begin{ex}
+  Let \(f(x) = 2.5x^2 + 15x\). Use the definition of the derivative to
+  compute \(f'(1)\).
+\end{ex}
+\begin{ex}
+  Derivatives need not always exist. Does \[
+    f(x) = |x| =
+    \begin{cases}
+      -x & x < 0 \\
+      x & x \geq 0
+    \end{cases}
+  \]
+  have a derivative at \(x=0\)?
+\end{ex}
+\begin{ex}
+  For a constant \(c\), compute \(\frac{d}{dx}(c)\). Does your answer
+  make sense?
+\end{ex}
+\begin{ex}
+  Using the binomial theorem \[
+(x+h)^n = x^n +  n \left(h x^{n-1} +
+    \frac{n-1}{2} h^2 x^{n-2} + \cdots
+    \cdots + \frac{n-1}{2} h^{n-2} x^2 + h^{n-1} x\right) + h^n,
+  \] compute the derivative for
+  \(f(x) = x^n\) where \(n\) is a positive integer.
+\end{ex}
+\begin{defi}
+  We define the \de{power rule} for any real number \(n\) to be \(\frac{d}{dx}(x^n) = \)
+\end{defi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 2.4 Part I}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ex}
+  Consider the function \(f(x) = \frac{x^2-1}{x+1}\). What is the domain
+  of this function? What is \(f\left(-\frac{9}{10}\right)\)? What about
+  \(f\left(-\frac{99}{100}\right)\)? Can you find an \(x\) such that \(f(x) - (-2)
+  = \frac{1}{10^3}\)? (Hint: if necessary, use \(99^2 = 9801\).).
+\end{ex}
+\begin{defi}
+  We say the function \(f\) has the \de{right-handed limit} \(L\) as
+  \(x \to a\) from
+  the right if
+\end{defi}
+\begin{ex}
+  Consider \(f(x) = \frac{x^2-1}{x+1}\). What is \(\lim_{x \to -1^+}
+  f(x)\)? Consider \[
+    g(x) =
+    \begin{cases}
+      x^{3/2} & x \neq 4 \\
+      -1 & x = 4
+    \end{cases}
+  \]
+  What is \(\lim_{x \to 4^+} g(x)\)?
+\end{ex}
+\begin{ex}
+  Consider \[
+    f(x) =
+    \begin{cases}
+      -6 & -\infty < x < -3 \\
+      x & -3 \leq x \leq 3 \\
+      6 & x > 3
+    \end{cases}
+  \]
+  What is \(\lim_{x \to -3^-} f(x), \lim_{x \to -3^+} f(x), \lim_{x
+    \to 3^-}f(x)\), and \(\lim_{x \to 3^+} f(x)\)?
+\end{ex}
+\begin{defi}
+  We say the function \(f\) has the \de{(two-sided) limit} \(L\) as \(x \to
+  a\) if
+\end{defi}
+\begin{ex}
+  Consider \[
+    f(x) =
+    \begin{cases}
+      -10 & x \leq -5 \\
+      x & -5 < x < -2 \\
+      \frac{1}{x+1} & -2 \leq x < -1 \text{ or } -1 < x \leq 0\\
+      x+1 & 0 < x < 5 \\
+      -2 & x = 5 \\
+      x^2 & x > 5 \\
+    \end{cases}
+  \]
+  What are \(\lim_{x \to -5} f(x), \lim_{x \to -2} f(x), \lim_{x \to
+    -1} f(x), \lim_{x \to 0} f(x)\), and \(\lim_{x \to 5} f(x)\)? Note
+  that ``does not exist (DNE)'' is an acceptable answer.
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 6.2: Integration by Substitution}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ex}
+  We have learned how to solve basic integrals. What about more
+  complicated ones? Can you solve this more complicated integral? \[
+    \int 2x \sqrt{1+x^2} \dx
+  \]
+  Remember, you need only find a function \(F(x)\) such that \(F'(x) =
+  2x \sqrt{1+x^2}\). (Hint: think about the chain rule for derivatives.)
+\end{ex}
+\begin{thrm}
+  Let \(F\) and \(g\) be differentiable functions. If \(F'\) is
+  continuous on the range of \(g\), then \[
+    \int F'(g(x))g'(x) \dx =
+  \]
+\end{thrm}
+\vspace{-1in}
+\begin{ex}
+  Compute the following indefinite integrals using substitution.
+  \begin{enumerate}
+  \item \(\int \sqrt{2x+1} \dx\) (Hint: substitute \(u=2x+1\))
+    \vspace{1in}
+  \item \(\int \frac{x}{\sqrt{1-4x^2}} \dx\)
+    \vspace{1in}
+  \item \(\int e^{5x} \dx\)
+  \end{enumerate}
+\end{ex}
+\begin{ex}
+  The registrar of a university estimates that total student
+  enrollment in the Continuing Education division will grow at the
+  rate of \[
+    N'(t) = 2000(1+0.2t)^{-\frac{3}{2}}
+    \text{ students/year}
+  \]
+  \(t\) years from now. If the current student enrollment is \(1000\),
+  find an expression giving the total student enrollment \(t\) years
+  from now. What will student enrollment be \(5\) years from now?
+\end{ex}
+\begin{ex}
+  Find \(\int \frac{(\ln x)^2}{x} \dx\)
+\end{ex}
+% \begin{ex}
+%   Consider the definite integral \[
+%     \int_0^2 2 x^3 \dx
+%   \]
+%   Evaluate it. Now, substitute \(u = x^2, du = 2x \dx\) and evaluate
+%   this integral. Must you change the bounds of integration to get the
+%   correct answer?
+% \end{ex}
+% \begin{thrm}
+%   If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on the
+%   range of \(u = g(x)\), then \[
+%     \int_a^b f(g(x))g'(x) \dx =
+%   \]
+% \end{thrm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

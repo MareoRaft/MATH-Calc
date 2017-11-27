@@ -1,0 +1,46 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 6.3: Area and the Definite Integral}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% example with F'(t) is a constant (million barrels per year). And we find the original F(t) and observe it's the area!
+\begin{ex}
+ An oil company produces a constant rate of $1.2$ million barrels per year.  How many barrels does it produce in 4 years? How many barrels does it produce in $t$ years?
+\end{ex}
+\begin{thrm}[Area under Graph of a Function]
+	If $f$ is a nonnegative continuous function on $[a,b]$, then the area $A$ of the region under the graph is
+	$$A = \lim_{n \to \oo} \hphantom{[f(x_1) + \ldots + f(x_n)] \Delta x}$$
+	where $x_1,\ldots,x_n$ are points from the $n$ subintervals of $[a,b]$ of equal width $\Delta x = \frac{b-a}{n}$.
+\end{thrm}
+\begin{defi}
+	If $f$ is a function defined on $[a,b]$, and
+	$$\hphantom{}$$
+	exists for all choices of points $x_1,\ldots,x_n$ in the subintervals, then this limit is the area under the curve and it is called the \de{definite integral} and it is denoted $\int_a^b f(x) \dx$.
+\end{defi}
+\begin{thrm}
+  If $f$ is continuous on $[a,b]$, then $\int_a^b f(x) \dx$ exists.  (We say ``$f$ is \de{integrable} on $[a,b]$.'')
+\end{thrm}
+\begin{ex}
+  What does $\int_2^6 (x^2 + 1) \dx$ mean in terms of area?  Draw a
+  picture.  Approximate the area $\int_2^6 (x^2 + 1) \dx$ by cutting
+  $[2,6]$ into 4 equal intervals. Is this approximation accurate?
+\end{ex}
+\vspace{1in}
+\begin{ex}
+  What happens if the function dips down below the $x$-axis?  What is
+  the area under the curve $y = 4 - x$ on the interval $[0, 5]$?
+  Using the definition, what is $\int_0^5 (4 - x) \dx$?
+\end{ex}
+\begin{ex}
+  Compute \(F(x) = \int(4-x) \dx\). What is \(F(5)-F(0)\)?
+\end{ex}
+% \vspace{-2in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

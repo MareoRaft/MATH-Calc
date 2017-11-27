@@ -1,0 +1,100 @@
+\usepackage[utf8x]{inputenc} % try to encode as UTF-8 extended.
+\usepackage[margin=2cm, bottom=3cm, top=2cm]{geometry}
+\usepackage{textpos}
+\usepackage{amssymb}
+\usepackage{amsthm} % http://ctan.org/pkg/ams % \begin{thrm}
+\usepackage{amssymb,mathrsfs,amsmath}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage{color} % for \definecolor
+\usepackage{enumitem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\suchthat}{\mid} % for the "such that" symbol in a set definition
+\newcommand{\st}{\suchthat} % shorthand for "such that"
+\newcommand{\from}{\colon} % for use in $f \from X \to Y$
+\newcommand{\lto}{\leftarrow}
+\newcommand{\limplies}{\Longleftarrow} % left implies.  Implies, but in the opposite direction.
+\newcommand{\of}{\circ} % function composition
+\newcommand{\de}{\underline} % for newly defined terms
+\newcommand{\oo}{\infty} % shorthand for "infinity"
+\newcommand{\N}{{\mathbb N}} % natural numbers
+\newcommand{\Z}{{\mathbb Z}} % integers
+\newcommand{\Q}{{\mathbb Q}} % rational numbers
+\newcommand{\R}{{\mathbb R}} % real numbers
+\newcommand{\vol}{\operatorname{Vol}} % volume
+\newcommand{\ov}{\overline} % shorthand for a bar on a symbol
+\newcommand{\eqname}[1]{\tag*{#1}} % Tag equation with name
+\renewcommand{\d}{\ d} % For dx, d\mu, etc. in integrals to have some space.
+\newcommand{\dx}{\d x}
+\newcommand{\vs}{\vspace{8pt}}
+\newcommand{\nameline}{
+  \begin{textblock*}{100mm}(.65\textwidth,-4.8cm)
+    Name:\underline{\qquad\qquad\qquad\qquad\qquad\qquad}
+  \end{textblock*}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%% FORMATTING %%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\thesection\alph{equation}} % avoids conflict between numbers of proclamations and numbers of equations
+\addtolength{\footskip}{2\baselineskip} % to lower the page numbers
+\parskip = 2pt
+\allowdisplaybreaks
+\renewcommand{\labelenumi}{(\theenumi)} % use round brackets
+\renewcommand{\theenumi}{\alph{enumi}} % use alphabetic enumerations
+\pagestyle{plain} % suppress the running head - for working document
+\pagenumbering{gobble}
+\everymath{\displaystyle}
+% Some user-defined colors
+  \definecolor{mydefi}{cmyk}{1,0,0,.5}
+  \definecolor{myred}{rgb}{.7,.1,.1}
+  \definecolor{myblue}{rgb}{.1,.1,.6}
+  \definecolor{mygreen}{rgb}{.1,.6,.1}
+% theorem styles
+\newtheoremstyle{mainstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {70pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+\newtheoremstyle{longstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {170pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
+
+%%%%%%%%%%%%%%%%%%%%%%% THEOREMS %%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{examples}[thm]{Examples}
+\newtheorem{alg}[thm]{Algorithm}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{rmks}[thm]{Remarks}
+
+\theoremstyle{mainstyle} % this applies to ALL following new theorems % SEE research seminar, week 10 writeup for a possible way to exclude amsthm and [thm].
+
+\newtheorem{thrm}[thm]{Theorem}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{examp}[thm]{Example}
+
+\theoremstyle{longstyle}
+
+\newtheorem{ex}[thm]{Challenge}
+

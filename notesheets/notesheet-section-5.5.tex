@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 5.5: Differentiation of logarithmic functions}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thrm}
+	The derivative of $\ln(x)$ is
+\end{thrm}
+\vspace{-0.8in}
+\begin{ex}
+Using the above fact, find the derivatives of the following functions.
+  \begin{enumerate}
+    \item $f(x) = x^2 \ln(x)$
+    \item $g(x) = \frac{\ln(x)}{x^2}$
+  \end{enumerate}
+\end{ex}
+\begin{ex}
+  Of course differentiation rules that apply to functions in general can be applied to exponential functions too!  Please differentiate the following functions, applying the chain rule as needed.
+  \begin{enumerate}
+    \item $h(x) = \ln(6x^2 + x)$
+    \item $g(x) = \ln(f(x))$ (here $f$ is an arbitrary function, not the $f$ defined above)
+  \end{enumerate}
+\end{ex}
+\pagebreak
+\begin{ex}
+  Notice that you discovered the derivative of $\ln f(x)$ above.  This is a very handy formula to have.  What is the constraint on $f(x)$ in order for $\ln f(x)$ to be defined in the first place?  (hint: think about the domain of $\ln$).
+\end{ex}
+\vspace{-2.3in}
+\begin{ex}
+	Compute the derivative of $\ln(x^2 e^{-x^2})$ two different ways.  The first way is using the above formula (same as applying the chain rule).  The second way is to rewrite the expression a different way before differentiating.  (Rewrite the expression by expanding it as much as possible using the log rules.  Then differentiate)
+\end{ex}
+\begin{defi}
+	\de{Logarithmic differentiation} is the process of applying a log to an expression before differentiating it.  This allows us to exploit the log rules to make the differentiation easier.  But since we actually want the derivative of the original expression (WITHOUT the log), we must find a way to recover that information in the end.
+\end{defi}
+\vspace{-1.0in}
+\begin{ex}
+	Find the derivative of $y = x(x+1)$ using logarithmic differentiation.
+	\begin{enumerate}
+		\item Apply $\ln$ to both sides.
+		\bigskip
+		\bigskip
+		\item Expand the right side using log rules.
+		\bigskip
+		\bigskip
+		\item Differentiate both sides with respect to $x$.
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		\item (Realize that the left side is equal to $\frac{y'}{y}$.  Since $y = f(x)$, we can differentiate $\ln(f(x))$ directly, which have already done above.)
+		\item Rewrite the equation, placing $\frac{y'}{y}$ on the left side.
+		\bigskip
+		\bigskip
+		\item Solve for $y'$, thus finding the derivative of $y = x(x+1)$ as desired.
+	\end{enumerate}
+\end{ex}
+% \vspace{-2in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[12pt, landscape]{article}
+%\usepackage{../notesheets}
+\usepackage[margin=1cm, bottom=3cm, top=2cm]{geometry}
+\usepackage{textpos}
+\usepackage{amssymb}
+\usepackage{amsthm} % http://ctan.org/pkg/ams\begin{thrm}
+\usepackage{hyperref}
+\pagenumbering{gobble}
+\newtheoremstyle{mainstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {70pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+\newtheoremstyle{longstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {170pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
+\theoremstyle{mainstyle} % this applies to ALL following new theorems % SEE research seminar, week 10 writeup for a possible way to exclude amsthm and [thm].
+\newtheorem{thrm}[thm]{Theorem}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{examp}[thm]{Example}
+
+\theoremstyle{longstyle}
+\newtheorem{ex}[thm]{Challenge}
+
+
+
+\everymath{\displaystyle}
+
+\newcommand{\vs}{\vspace{8pt}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Keeping Special Points and Properties of Functions Straight}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{tabular}{c|c|c|c}
+  Type
+  &Form
+  &Relations
+  &Example Sentence \\
+  \hline
+  Critical Point
+  &\((a,f(a))\)
+  &\parbox{9cm}{\((a,f(a))\) is on the graph of
+    \(f\), so \(a\) is in the domain of
+    \(f\). \\
+  \(f'(a) = 0\), \(f'(a)\) does not exist, or...\\
+  \(a\) is called a critical number and \(f(a)\) is called a critical value.}
+  &\parbox{5cm}{The critical points of \(f(x) = x^2-x+2\) are
+    \((0,2)\) and \((1,2)\).} \\
+  \hline
+  Increasing/decreasing function
+  & \parbox{4cm}{\(f(x)\) is increasing/decreasing on \((a,b)\).}
+  & \parbox{9cm}{If \(f(x)\) is differentiable on \((a,b)\), then
+    \begin{itemize}
+    \item \(f'(x) > 0\) on \((a,b) \implies f\) is increasing on \((a,b)\).
+    \item \(f'(x) < 0\) on \((a,b) \implies f\) is decreasing on \((a,b)\).
+    \item \(f'(x) = 0\) on \((a,b) \implies f\) is constant on \((a,b)\).
+    \end{itemize}
+    }
+  & \parbox{5cm}{\(f(x) = 3x^4 - 4x^3 - 12x^2 + 5\) is increasing on
+    \((-\infty, 0)\) and \((2,\infty)\) and decreasing on \((0,2)\).} \\
+  \hline
+  Relative extrema
+  & \parbox{4cm}{A function has a relative extrema at \(x=c\). The
+    relative extrema } 
+\end{tabular}
+\end{document}

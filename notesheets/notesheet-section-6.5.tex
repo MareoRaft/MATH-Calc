@@ -1,0 +1,55 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 6.5: Evaluating Definite Integrals}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thrm}[Properties of Definite Integrals]
+  Let \(f\) and \(g\) be integrable functions. Then,
+  \begin{enumerate}
+  \item \(\int_a^a f(x) \dx = \)
+  \item \(\int_a^b f(x) \dx = \)
+  \item \(\int_a^b k f(x) \dx = \)
+  \item \(\int_a^b [f(x) \pm g(x)] \dx = \)
+  \item \(\int_a^b f(x) \dx + \int_b^c f(x) \dx = \)
+  \end{enumerate}
+\end{thrm}
+\begin{ex}
+  Evaluate \[
+    \int_0^4 \sqrt{2x+1} \dx
+  \]
+  by first finding \(\int \sqrt{2x+1} \dx\) and then applying the
+  Fundamental Theorem of Calculus.
+\end{ex}
+\begin{thrm}[Substitution for Definite Integrals]
+  If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on the
+  range of \(g(x)\), then \[
+    \int_a^b f(g(x))g'(x) \dx = \int
+  \]
+\end{thrm}
+\begin{ex}
+  Find the area under the graph of \(f(x) = 8xe^{x^2}\) on the
+  interval \([0,2]\).
+\end{ex}
+\begin{ex}
+  If \(f\) is continuous and \(\int_0^4 f(x) \dx = 10\), find
+  \(\int_0^2 f(2x) \dx\). If \(g\) is continuous and \(\int_0^9 g(x)
+  \dx = 4\), find \(\int_0^3 xg(x^2) \dx\).
+\end{ex}
+\begin{thrm}
+  Given a function \(f\) that is integrable on \([a,b]\), the
+  \de{average value} of \(f\) over \([a,b]\) is
+  \vspace{0.2in}
+\end{thrm}
+\begin{ex}
+	The height of the water in Swan Lake is measured periodically over the course of a year.  The height $h(t)$ in inches as a function of time $t$ in weeks is modelled by
+	$$ h(t) = 40 + \frac{1}{(t+1)^2}.$$
+	What is the average height of the lake water that year?
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

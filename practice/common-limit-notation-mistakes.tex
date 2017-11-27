@@ -1,0 +1,169 @@
+\documentclass[reqno,psamsfonts]{amsart}
+
+
+%-------Packages---------
+\usepackage[margin=.5in]{geometry}
+\usepackage{nopageno}
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+%--------Meta Data: Fill in your info------
+\title{Math 1210, section 011\\Common Mistakes With Limits}
+
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+Compute the following limits or write DNE if the limit does not exist.
+\begin{enumerate}
+\item[(a)] $\lim\limits_{x\to -7}\dfrac{x^2+12x+35}{x+7}$
+\\
+\item[(b)] $\lim\limits_{x\to 0}\dfrac{x^2+x}{x+10}$
+\end{enumerate}
+\vspace{1em}
+Here is how to \textbf{CORRECTLY} write the answer to these questions:
+\begin{enumerate}
+\item[(a)] \textbf{Solution:}
+\begin{align*}
+\lim\limits_{x\to -7}\frac{x^2+12x+35}{x+7}&=\lim\limits_{x\to-7}\frac{(x+5)(x+7)}{x+7}\\
+&=\lim\limits_{x\to -7}x+5\\
+&=-7+5\\
+&=-2
+\end{align*}
+
+\item[(b)] \textbf{Solution:}
+\begin{align*}
+\lim\limits_{x\to 0}\frac{x^2+x}{x+10}=\frac{0^2+0}{0+10}=\frac{0}{10}=0
+\end{align*}
+\end{enumerate}
+\vspace{2em}
+Here is a list of common ways to \textbf{INCORRECTLY} answer these question:
+
+\begin{enumerate}
+\item \textbf{Scribbling scratch work on the side and writing final answer without showing any logical steps.}
+\\
+\item \textbf{Failure to use limit signs.}
+\\
+\\\underline{Question (a) example solution}:
+\begin{align*}
+\lim\limits_{x\to -7}\frac{x^2+12x+35}{x+7}&=\frac{(x+5)(x+7)}{x+7}\\
+&=x+5\\
+&=-2
+\end{align*}
+
+
+\item \textbf{Failure to write the expression after the limit sign.}
+\\
+\\\underline{Question (a) example solution}:
+\begin{align*}
+\lim\limits_{x\to -7}\frac{x^2+12x+35}{x+7}&=\lim\limits_{x\to-7}\frac{(x+5)(x+7)}{x+7}\\
+&=\lim\limits_{x\to -7}x+5\\
+\lim\limits_{x\to -7} &=-2
+\end{align*}
+The last equality is nonsensical. The limit sign with no expression next to it is meaningless.
+
+\newpage
+\item \textbf{Failure to use equalities.}
+\\
+\\\underline{Question (a) example solution}:
+\begin{align*}
+\lim\limits_{x\to -7}\frac{x^2+12x+35}{x+7}&\ \lim\limits_{x\to-7}\frac{(x+5)(x+7)}{x+7}\\
+&\lim\limits_{x\to -7}x+5\\
+&-7+5\\
+&\boxed{-2}
+\end{align*}
+
+\item \textbf{Using arrows instead of equalities.}
+\\
+\\\underline{Question (a) example solution}:
+\begin{align*}
+\lim\limits_{x\to -7}\frac{x^2+12x+35}{x+7}&\implies \lim\limits_{x\to-7}\frac{(x+5)(x+7)}{x+7}\\
+&\implies \lim\limits_{x\to -7}x+5\\
+&\implies -7+5\\
+&\implies -2
+\end{align*}
+In mathematics, if $P$ and $Q$ are statements, then $P\implies Q$ means $P$ implies $Q$. It does not make sense to say
+\begin{align*}
+\lim\limits_{x\to -7}\frac{x^2+12x+35}{x+7}&\implies \lim\limits_{x\to-7}\frac{(x+5)(x+7)}{x+7}
+\end{align*}
+ because the things on the left and right of the arrows are not statements, they are numbers. An example of an appropriate time to use an arrow is the following:
+\begin{align*}
+ x+1=6\implies x=5
+\end{align*}
+This time the arrow makes sense because $x+1=6$ and $x=5$ are both statements. $x+1=6$ is the statement ``$x$ plus one is equal to 6'' and $x=5$ is the statement ``$x$ is equal to 5''.
+\\
+\item \textbf{Misplaced equal signs.}
+\\
+\\\underline{Question (a) example solution}:
+\begin{align*}
+\lim\limits_{x\to -7}=\frac{x^2+12x+35}{x+7}&\lim\limits_{x\to-7}=\frac{(x+5)(x+7)}{x+7}\\
+&\lim\limits_{x\to -7}=x+5\\
+&=-7+5\\
+&= -2
+\end{align*}
+The equal sign should always go before the limit sign, not between the limit sign and the expression.
+\\
+\item \textbf{Setting limit equal to $\dfrac{0}{0}$.}
+\\
+\\\underline{Question (a) example solution}:
+\begin{align*}
+\lim\limits_{x\to -7}\frac{x^2+12x+35}{x+7}=\frac{(-7)^2+12(-7)+35}{-7+7}=\frac{0}{0}
+\end{align*}
+The limit of a function either does not exist or is a number. It does not make sense to say that the limit of a function is equal to $\frac{0}{0}$. Remember if you plug in and get $\frac{0}{0}$ it means that more work is required. You must perform algebraic operations to reduce the expression and compute the limit or determine it does not exist.
+\\
+\item \textbf{Getting $\frac{0}{a}$ where $a$ is some non-zero real number and determining that the limit DNE.}
+\\
+\\\underline{Question (b) example solution}:
+\begin{align*}
+\lim\limits_{x\to 0}\frac{x^2+x}{x+10}=\frac{0^2+0}{0+10}=\frac{0}{10}=DNE
+\end{align*}
+If $a$ is a non-zero real number, then $\frac{0}{a}=0$.
+
+\end{enumerate}
+
+
+
+\end{document}
+
+

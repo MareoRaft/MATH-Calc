@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=2cm, bottom=3cm, top=2cm]{geometry}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{extramarks}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{enumitem}
+
+\newcommand{\vs}{\vspace{18pt}}
+\newcommand{\oo}{\infty}
+\renewcommand{\d}{\ d} % For dx, d\mu, etc. in integrals to have some space.
+\newcommand{\dx}{\d x}
+
+
+\pagestyle{fancy}
+
+\pagenumbering{gobble}
+\setlength\parindent{0pt}
+%
+% Create Problem Sections
+%
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak\
+{}
+\nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} contin\
+ued on next page\ldots}\nobreak{}
+}
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} contin\
+ued on next page\ldots}\nobreak{}
+\stepcounter{#1}
+\nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will
+% adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this
+% template for an
+% example.
+%                                                          ~%
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+
+\newenvironment{homeworkProblem}[1][-1]{
+\ifnum#1>0
+\setcounter{homeworkProblemCounter}{#1}
+\fi
+\subsubsection{Problem \arabic{homeworkProblemCounter}}
+\setcounter{partCounter}{1}
+\enterProblemHeader{homeworkProblemCounter}
+}{
+  \vspace{35ex}
+  \exitProblemHeader{homeworkProblemCounter}
+}
+\newcommand{\footer}{
+  % blank
+}
+\newcommand{\header}{
+  \lhead{\large MATH 1210}
+  \chead{\large Sections 6.4-6.5 Written Homework}
+  \rhead{\large Fall 2017}
+  {{Name:} \underline{\hspace{3in}}}\\ \ \\
+}
+\everymath{\displaystyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\author{}
+%\title{}
+
+\begin{document}
+\header
+\footer
+%\maketitle
+% \begin{textblock*}{100mm}(.65\textwidth,-5.3cm)
+%   Name:\underline{\qquad\qquad\qquad\qquad\qquad\qquad}
+% \end{textblock*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\textbf{Instructions.} Solve the problems on a SEPARATE piece of paper and write up the final solution on THIS piece of paper.  Show work clearly.  Feel free to collaborate with your classmates, but all solutions turned in should be your own work.
+\begin{homeworkProblem}
+  Let $C$ be the area in the $xy$-plane bounded below by the $x$-axis and above by the graph of the function $f(x) = \sqrt{4 - x^2}$.  Write a \emph{definite integral} expression for $C$ and then compute $C$.  (Hint: It may be helpful to draw the described region in order to figure out what the limits of integration are.)
+\end{homeworkProblem}
+\vspace{-0.5in}
+\begin{homeworkProblem}
+  Consider the functions $g(x) = \frac{1}{x^2}$ and $h(x) = \frac{1}{x}$.  Your task is to interpret the following expressions:
+  $$\lim_{b \to \oo} \int_1^b g(x) \dx \qquad \text{and} \qquad \lim_{b \to \oo} \int_1^b h(x) \dx.$$
+  In particular, you should determine if each limit exists and describe a geometric region whose area corresponds to each expression.  A well-labelled picture can serve as the description of the geometric region.  (Label all relevant lines, curves, and points)
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

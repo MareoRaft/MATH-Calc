@@ -1,0 +1,250 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=2cm, bottom=3cm, top=2cm]{geometry}
+% \usepackage[margin=1.0in]{geometry}
+% \usepackage{textpos}
+% \everymath{\displaystyle}
+
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{extramarks}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{enumitem}
+\usepackage{notesheets/notesheets}
+
+\pagestyle{fancy}
+
+\newtheoremstyle{mainstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {70pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+\newtheoremstyle{longstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {170pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
+\theoremstyle{mainstyle} % this applies to ALL following new theorems % SEE research seminar, week 10 writeup for a possible way to exclude amsthm and [thm].
+
+
+\newtheorem{thrm}[thm]{Theorem}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{examp}[thm]{Example}
+
+\theoremstyle{longstyle}
+\newtheorem{ex}[thm]{Challenge}
+
+
+
+\everymath{\displaystyle}
+
+\newcommand{\vs}{\vspace{8pt}}
+
+
+\pagenumbering{gobble}
+\setlength\parindent{0pt}
+%
+% Create Problem Sections
+%
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak\
+{}
+\nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} contin\
+ued on next page\ldots}\nobreak{}
+}
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} contin\
+ued on next page\ldots}\nobreak{}
+\stepcounter{#1}
+\nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will
+% adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this
+% template for an
+% example.
+%                                                          ~%
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+
+\newenvironment{homeworkProblem}[1][-1]{
+\ifnum#1>0
+\setcounter{homeworkProblemCounter}{#1}
+\fi
+\subsubsection{Problem \arabic{homeworkProblemCounter}}
+\setcounter{partCounter}{1}
+\enterProblemHeader{homeworkProblemCounter}
+}{
+  \vspace{35ex}
+  \exitProblemHeader{homeworkProblemCounter}
+}
+\newcommand{\footer}{
+\rfoot{\ifthenelse{\value{page}=1}{\textbf{This quiz has 2 sides}}{}}
+}
+\newcommand{\header}{
+a\lhead{\large MATH 1210}
+\chead{\large Implicit Differentiation \& 1st Deriv
+  Applications Quiz} 
+\rhead{\large Fall 2017}
+{{Name and computing ID:} \underline{\hspace{3in}}}\\ \ \\
+\fbox{
+\begin{minipage}{6.5 in}
+\textit{On my honor as a student, I pledge that I have neither given nor received help on this assignment.} \\ \ \\
+{Signature:} {\underline {\hspace{3in}}}
+\end{minipage}}
+}
+
+\everymath{\displaystyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Compound Interest Worksheet}
+
+\begin{document}
+\maketitle
+% \begin{textblock*}{100mm}(.65\textwidth,-5.3cm)
+%   Name:\underline{\qquad\qquad\qquad\qquad\qquad\qquad}
+% \end{textblock*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As briefly discussed in class, various types of monetary investments
+and debts accruse ``interest.''
+\begin{defn}
+  From an economics standpoint, \de{interest}
+is the charge for the privilege of borrowing money, usually expressed
+in terms of a percentage.
+\end{defn}
+Perhaps an example best illustrates what is going on.
+\begin{example}
+  Consider a savings account that gives \(1\%\) interest per
+  year. Then, if you put \(\$100\) in the savings account, the bank
+  will pay you \(1\%\) of \(\$100\) after a year. Thus, you earnings
+  will be as in the table below \\ \\
+  \begin{tabular}{|c|c|}
+    Years after deposit&Total balance \\
+    \(0\) & \(\$100.00\) \\
+    \(1\) & \(\$101.00 = 100 + 0.01 \cdot 100\) \\
+    \(2\) & \(\$102.01 = 101 + 0.01 \cdot 101\) \\
+    \(3\) & \(\$103.03 = 102.01 + 0.01 \cdot 102.01\) \\
+    \vdots & \vdots \\
+    \(10\) & \(\$110.46\) \\
+    \vdots & \vdots \\
+    \(100\) & \(\$270.48\)
+  \end{tabular}
+\end{example}
+In general, interest does not need to be compounded annually. Interest
+can be compounded over any interval of time. It could be monthly,
+daily, even every second. The general formula for compound interest is
+the following: \[
+  A(t) = P \left( 1+\frac{r}{n} \right)^{n\cdot t}
+\]
+where \(P\) is the principal (initial deposit), \(r\) is the interest
+rate, and \(n\) is the number of times interest is applied per year,
+and \(t\) is the amount of time in years passed since the inital
+deposit. \\
+
+In our example above, we could model the problem above by taking
+\begin{align*}
+  P & = \$100 \\
+  r & = 0.01 \\
+  n & = 1
+\end{align*}
+\begin{ex}
+  Based on the example above, consider the function \[
+    A(t) = 100 \left( 1 + \frac{0.01}{1} \right)^{1 \cdot t}
+  \]
+  to compute the balance of a savings account with a \(1\%\) annual
+  compounded interest rate. Check that the following evaluations are
+  true. (You can use a calculator.)
+  \begin{enumerate}
+  \item \(A(0) = 100\)
+  \item \(A(1) = 101\)
+  \item \(A(2) = 102.01\)
+  \item \(A(3) = 103.0301\)
+  \item \(A(10) = 110.462\ldots\)
+  \item \(A(100) = 270.481\ldots\)
+  \end{enumerate}
+  Can you see how the formula works based on the original example?
+\end{ex}
+\begin{ex}
+  I forget to pay my credit card bill of \(\$400\) and I am charged
+  \(20\%\) interest on my unpaid debt compounded monthly. How much
+  money will I owe if I forget for \(3\) months? How much will I owe
+  if I forget for \(1\) year? (Hint: remember that \(3\) months is
+  \(0.25\) years.)
+\end{ex}
+In class, I declared that we can model ``countinuously compounded
+interest'' using the formula \[
+  A(t) = P e^{rt}
+\]
+What is continously compounded interest and where did that formula
+come from?
+\begin{defn}
+  \de{Continuously compounded interest} is interest that is applied
+  every moment. 
+\end{defn}
+However, how many ``moments'' are in a year? This does not make much
+sense by trying to compute, but we can model such a statement using
+limits. If we applied interest every moment, we would get \[
+  A(t) = \lim_{n \to \infty} P \left( 1 + \frac{r}{n} \right)^{n \cdot t}
+\]
+However, if we try to apply limit laws, we see that we get the
+expression \(1^\infty\), which is an indeterminate form, so we must be
+more clever!
+\begin{ex}
+  \textbf{Bonus!} We seek to evaluate the limit above.
+  \begin{enumerate}
+  \item Consider \(A(t) = P \left( 1 + \frac{r}{n}
+    \right)^{n \cdot t}\). Apply \(\ln\) to both sides of the
+    equation.
+    \vspace{1in}
+  \item Use log rules to bring down the exponent.
+    \vspace{1in}
+  \item Apply \(\lim_{n \to \infty}\) to both sides.
+    \vspace{1in}
+  \item Substitute \(n = \frac{r}{h}\). If \(\frac{r}{h} \to \infty\),
+    what must \(h\) go to?
+    \vspace{1in}
+  \item What does this remind you of? Remember that \(\ln(1) =
+    0\). Subtract \(\frac{\ln(1)}{h}\) from your limit. Does it remind
+    you of anything now?
+    \vspace{1in}
+  \item Remember that \(\frac{d}{dx} \ln(x) = \frac{1}{x}\). Use this
+    fact to evaluate your limit.
+        \vspace{1in}
+  \item We now know what \(\lim_{n \to \infty} \ln(A(t))\) is equal
+    to. Now, remember that \(\ln(x)\) is a continuous function, so
+    \(\lim_{n \to \infty} \ln(A(t)) = \ln(\lim_{n\to\infty}
+    A(t))\). Apply this fact.
+        \vspace{1in}
+  \item Exponentiate both sides of the equation to solve for \(A(t)\). What is \(A(t)\)?
+  \end{enumerate}
+
+\end{ex}
+\end{document}

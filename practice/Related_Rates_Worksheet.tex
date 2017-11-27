@@ -1,0 +1,339 @@
+\documentclass[reqno,psamsfonts]{amsart}
+
+
+%-------Packages---------
+\usepackage[margin=.5in]{geometry}
+\usepackage{nopageno}
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+%--------Meta Data: Fill in your info------
+\title{Math 1210\\Related Rates Worksheet}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\noindent
+\section*{Some Useful Geometric Facts for Common Related Rates Problems}
+\subsection*{Pythagorean Theorem}
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0)--(0,2)--(2,0)--(0,0);
+\draw[dashed] (.3,0)--(.3,.3)--(0,.3);
+\node[below] at (1,0) {$a$};
+\node[left] at (0,1) {$b$};
+\node at (1.1,1.2) {$c$};
+\node at (6, 1) {Pythagorean Theorem: $a^2+b^2=c^2$};
+\end{tikzpicture}
+
+\end{center}
+\subsection*{Area, Perimeter, Circumference Formulas}
+\begin{center}
+\vspace{2em}
+\begin{tikzpicture}
+\draw (-4,0)--(-1,0)--(-1,2)--(-4,2)--(-4,0);
+\node[below] at (-2.5,0) {$x$};
+\node[right] at (-1,1) {$y$};
+\node at (-2.5,-1) {$Area =xy$};
+\node at (-2.5, -2) {$Perimeter =2x+2y$};
+
+\draw (1.25,0)--(2,2)--(4,0)--(1.25,0);
+\draw[dashed] (2,0)--(2,2);
+\node[below] at (2.4,0) {$b$};
+\node[right] at (2,1) {$h$};
+\node at (2.5,-1) {$Area=\frac{1}{2}bh$};
+
+
+\draw (7,1) circle(30pt);
+\draw (7,1)--(8.05,1);
+\node[below] at (7.5,1) {$r$};
+\node at (7, -1) {$Area=\pi r^2$};
+\node at (7,-2) {$Circumference =2\pi r$};
+\end{tikzpicture}
+
+\end{center}
+
+
+\subsection*{Volume Formulas}
+
+\begin{center}
+\vspace{2em}
+\begin{tikzpicture}
+\draw (-4,0)--(-1,0)--(-1,2)--(-4,2)--(-4,0);
+\draw (-4,2)--(-3,3)--(0,3)--(-1,2);
+\draw (0,3)--(0,1)--(-1,0);
+\node[below] at (-2.5,0) {$x$};
+\node[left] at (-1,1) {$y$};
+\node[right] at (-.45, .5) {$z$};
+\node at (-2, -1) {$Volume = xyz$};
+
+\draw (5,2.5) ellipse [x radius =2, y radius = .5];
+\draw (5,.5) ellipse [x radius =2, y radius = .5];
+\draw (3,2.5)--(3,.5);
+\draw (7,2.5)--(7,.5);
+\draw (7,.5)--(5,.5);
+\node[below] at (6,.5) {$r$};
+\node[right] at (7,1.25) {$h$};
+\node at (5, -1) {$Volume = \pi r^2h$};
+
+\draw (11,.5) ellipse [x radius =1.5, y radius = .4];
+\draw (9.5, .5)--(11, 3)--(12.5,.5);
+\draw[dashed] (11, .5)--(11,3);
+\draw (11, .5)--(12.5,.5);
+\node[below] at (11.75,.5) {$r$};
+\node[right] at (11, 1.6) {$h$};
+\node at (11, -1) {$Volume = \frac{1}{3}\pi r^2 h$};
+\end{tikzpicture}
+
+\end{center}
+
+\section*{General Guidelines for Solving Related Rates Problems}
+\begin{enumerate}
+\item Assign a variable to each quantity. Draw a diagram if applicable.
+\\ 
+\item Write down what we are trying to find as well as the given values of the variables and the given rates of change. 
+\\
+\item Write down any equation(s) that relate the variables. 
+\\
+\item Implicitly differentiate equation(s).
+\\
+\item Solve for desired rate of change. Then state the final answer and remember to include units. 
+\end{enumerate}
+\newpage
+
+\subsection*{Related Rates Examples}
+\begin{enumerate}
+\vspace{1em}
+\item Webassign 3.6 \# 11. A coffee pot in the form of a circular cylinder of radius 5 in. is being filled with water flowing at a constant rate. If the water level is rising at the rate of 0.7 in./sec, what is the rate at which water is flowing into the coffee pot? (Round your answer to one decimal place.)
+\\
+\\\textbf{Solution:} 
+\\
+\\
+\underline{Step 1:}
+Let $h$ be the height of the water in the coffee pot. Let $V$ be the volume of water in the pot. It is important to recognize that $V$ is a function of $h$ and $h$ is a function of time $t$. In other words, as time changes the height of the water changes and as the height of the water changes the volume of the water changes. 
+\begin{center}
+\begin{tikzpicture}[scale =.7]
+\filldraw[cyan] (5,.5) ellipse [x radius =2, y radius = .5];
+\filldraw[cyan] (5,2) ellipse [x radius =2, y radius = .5];
+\filldraw[cyan] (3,.5) rectangle (7,2);
+\draw (5,2) ellipse [x radius =2, y radius = .5];
+\draw(5,.5) ellipse [x radius =2, y radius = .5];
+\draw (5,5) ellipse [x radius =2, y radius = .5];
+\draw (3,5)--(3,.5);
+\draw (7,5)--(7,.5);
+\draw (7,.5)--(5,.5);
+\node[below, scale =.7] at (6,.5) {$5$};
+\node[right] at (7,1.25) {$h$};
+\end{tikzpicture}
+\end{center}
+\vspace{2em}
+\underline{Step 2:}  From the problem, we see that $\dfrac{dh}{dt}=.7$ and we are trying to find $\dfrac{dV}{dt}$. 
+\\
+\\
+\underline{Step 3:} $V=(5^2)\pi h\implies V=25\pi h$
+\\
+\\
+\underline{Step 4:} $\frac{dV}{dt}=25\pi \frac{dh}{dt}$
+\\
+\\
+\underline{Step 5:} Trying to find $\dfrac{dV}{dt}$ and we know $\dfrac{dh}{dt}=.7$. So plugging into the equation from step 4 we get:
+\begin{align*}
+\frac{dV}{dt}=25\pi (.7)\approx 54.98
+\end{align*}
+The final answer is $54.98$ in.$^3$/sec
+\\
+
+\item Webassign 3.6 \# 12. A 15-ft ladder leaning against a wall begins to slide. How fast is the top of the ladder sliding down the wall at the instant of time when the bottom of the ladder is 9 ft from the wall and sliding away from the wall at the rate of 6 ft/sec?
+\\
+\\\textbf{Solution:}
+\\
+\\
+\underline{Step 1:} 
+Let $x$ be the distance from the bottom of the ladder to the wall and let $y$ be the distance from the floor to the top of the ladder. It is important to recognize that $x$ and $y$ are both functions of time $t$. In other words, as time changes the ladder is slipping, so $x$ and $y$ both change. 
+\begin{center}
+\begin{tikzpicture}[scale =.8]
+\draw[ultra thick] (-7, 0)--(0,0)--(0, 5);
+\draw (-2,0)--(0,4);
+\node[right] at (0, 5) {Wall};
+\node[left] at (0, 2) {$y$};
+\node [below] at (-1,0) {$x$};
+\node at (-1.4, 2) {$15$};
+\end{tikzpicture}
+\end{center}
+\underline{Step 2:} From the problem, we see that we are trying to find $\dfrac{dy}{dt}$ when $\dfrac{dx}{dt}=6$ and $x=9$. 
+\\
+\\\underline{Step 3:} By the Pythagorean theorem, we see that $15^2=x^2+y^2$. 
+\\
+\\\underline{Step 4:}
+\begin{align*}
+\frac{d}{dt}(15^2)&=\frac{d}{dt}(x^2+y^2)\\
+\implies 0&= 2x\frac{dx}{dt}+2y\frac{dy}{dt}
+\end{align*}
+\underline{Step 5:} From the original Pythagorean theorem equation, we know when $x =9$ that $15^2 =9^2+y^2$. Therefore, when $x=9$, $y=\pm12$. But for this problem it only makes sense for $y=12$. Now we simply plug in $x=9$, $y=12$, and $\dfrac{dx}{dt}=6$ into the equation in step 4. 
+\begin{align*}
+0&=2(9)(6)+2(12)\frac{dy}{dt}\\
+\implies \frac{dy}{dt}&=-\frac{9}{2}
+\end{align*}
+So the final answer is that the ladder is sliding down the wall at a rate of $\frac{9}{2}$ ft/sec when $x=9$ and $\frac{dx}{dt}=6$. 
+\\
+\item Suppose we have a constantly changing rectangular box with fixed volume of $100\text{ in}^3$ and a square base where the sides of the base are increasing by $5$ inches every second. If this necessarily flexible material costs $\$10, \$20,$ and $\$30$ per square inch, for the top, bottom, and sides, respectively, then find the rate of change of the cost when the sides of the base are $10$ inches.
+\\
+\\\textbf{Solution:} 
+\\
+\\\underline{Step 1:} Let $x$ be the length of a side of the base of the box, $y$ be the height of the box, $V$ be the volume of the box and $C$ be the total material cost of the box. It is important to recognize that $V$ and $C$ are both functions of $x$ and $y$, and $x$ and $y$ are both functions of time $t$. 
+\begin{center}
+\begin{tikzpicture}
+\draw (-4,0)--(-1,0)--(-1,2)--(-4,2)--(-4,0);
+\draw (-4,2)--(-3,3)--(0,3)--(-1,2);
+\draw (0,3)--(0,1)--(-1,0);
+\node[below] at (-2.5,0) {$x$};
+\node[left] at (-1,1) {$y$};
+\node[right] at (-.45, .5) {$x$};
+\end{tikzpicture}
+\end{center}
+\underline{Step 2:} We are trying to find $\dfrac{dC}{dt}$ when $x=10$ given that the material costs $\$10, \$20,$ and $\$30$ per square inch, for the top, bottom, and sides, respectively and that $\dfrac{dx}{dt}=5$ and $V=100$ is fixed. 
+\\
+\\\underline{Step 3:} \begin{align*}
+100&=V=x^2y\\
+C&=10x^2 +20x^2 +30(4)xy=30x^2+120xy
+\end{align*}
+\underline{Step 4:}
+\begin{align*}
+0&=2x\frac{dx}{dt}y+x^2\frac{dy}{dt}\\
+\frac{dC}{dt}&=60x\frac{dx}{dt}+120\frac{dx}{dt}y+120x\frac{dy}{dt}
+\end{align*}
+\underline{Step 5:} From the volume equation, when $x=10$ we have that $100=10^2y$, thus $y=1$. So now we plug in $x=10$, $y=1$, and $\dfrac{dx}{dt}=5$ into the equations in step 4 and solve for $\dfrac{dC}{dt}$. 
+\begin{align*}
+0&=2(10)(5)(1)+(10)^2\frac{dy}{dt}\implies \frac{dy}{dt} = -1\\
+\frac{dC}{dt}&=60(10)(5)+120(5)(1)+120(10))(-1)=2400
+\end{align*}
+Therefore, the final answer is that the rate of change of the cost when the sides of the base are 10 inches is equal to $2400$ dollars/sec. 
+
+\item Suppose that water is flowing out of a hole at the bottom of a cone into a cylinder located below the bottom of the cone. Suppose that the height of the water in the cone is decreasing at a constant rate of $2\ cm/sec$. The cone has radius $10\ cm$ and height $20\ cm$. The cylinder has radius $30\ cm$ and height $70\ cm$. For simplicity, assume that as soon as water leaves the hole of the cone it instantaneously goes into the cylinder. In other words, it takes 0 time for the water to fall from the hole into the cylinder. What is the rate of change of the height of the water in the cylinder when the height of the water in the cone is $4\ cm$? See the next page for a picture. \textbf{(Hint: Use Similar Triangles)}
+\\
+\\\textbf{Solution:}
+\\
+\\\underline{Step 1:} Let $h_{1}$ be the height of the water in the cone and let $h_{2}$ be the height of the water in the cylinder. Let $r$ be the radius of the cone of water contained in the cone. In the figure below, $r$ is in green. Let $V_{1}$ be the volume of the water in the cone. Let $V_{2}$ be the volume of water in the cylinder. Notice $h_{1}$, $h_{2}$ and $r$ are functions of time. $V_{1}$ is a function of $h_{1}$ and $r$. $V_{2}$ is a function $h_{2}$. 
+\begin{center}
+\begin{tikzpicture}
+\filldraw[cyan] (5,.5) ellipse [x radius =2, y radius = .5];
+\draw (5,.5) ellipse [x radius =2, y radius = .5];
+\filldraw[cyan](3,.5)  rectangle (7,1);
+\filldraw[cyan] (5,1) ellipse [x radius =2, y radius = .5];
+\draw (5,1) ellipse [x radius =2, y radius = .5];
+\filldraw[cyan] (5,4)--(4.5,5)--(5.5,5)--(5,4);
+\filldraw[cyan] (5,5) ellipse [x radius =.5, y radius = .125];
+\draw (5,5) ellipse [x radius =.5, y radius = .125];
+\draw (5,6) ellipse [x radius =1, y radius = .25];
+\draw (4,6)--(5,4)--(6,6);
+\draw (5,2.5) ellipse [x radius =2, y radius = .5];
+\filldraw[white] (5,4) circle(2pt);
+\draw (5,4) circle(2pt);
+\draw[->] (5,3.9)--(5,1);
+\draw[dashed,|-|] (3.5,4)--(3.5,6);
+\node[left] at (3.5,5) {$20$};
+\draw[dashed,|-|] (6,4)--(6,5);
+\node[right] at (6,4.5) {$h_{1}$};
+\draw (5,6)--(6,6);
+\node[below, scale = .5] at (5.5, 6) {$10$};
+\draw (5, 5)--(5.5,5);
+\node[green, scale = .4] at (5.25, 4.94) {$r$};
+\draw[dashed,|-|] (2,.5)--(2,2.5);
+\node[left] at (2,1.5) {$70$};
+\draw[dashed,|-|] (7.5,.5)--(7.5,1);
+\node[right] at (7.5,.75) {$h_{2}$};
+\draw (5,2.5)--(7,2.5);
+\node[below, scale =.75] at (6,2.5) {$30$};
+
+\draw (3,2.5)--(3,.5);
+\draw (7,2.5)--(7,.5);
+\end{tikzpicture}
+\end{center}
+\underline{Step 2:} We are trying to find $\dfrac{dh_{2}}{dt}$ when $h_{1} = 4$ given that $\dfrac{dh_{1}}{dt}=-2$. 
+\\
+\\
+\underline{Step 3:} From the figure we see that $V_{1} = \frac{1}{3}\pi r^2h_{1}$ and $V_{2} = \pi(30)^2h_{2}$. Using similar triangles, we can find the relationship between $r$ and $h_{1}$. 
+\\
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0)--(0,3)--(2,3)--(0,0);
+\draw (0,1.5)--(1,1.5);
+\draw[dashed, |-|] (-1,0)--(-1,3);
+\node[left] at (-1,1.5) {$20$};
+\node[above] at (1,3) {$10$};
+\node[above] at (.5,1.5) {$r$};
+\node[left] at (0, .75) {$h_{1}$};
+\end{tikzpicture}
+\end{center}
+We find that $\frac{h_{1}}{r}=\frac{20}{10}$. Rewriting this we have that $h_{1}=2r$. 
+\\
+\\
+\underline{Step 4:} There are three equations to differentiate with respect to time.
+\begin{align*}
+\frac{dV_{1}}{dt}&=\frac{d}{dt}\left(\frac{1}{3}\pi r^2h_{1}\right)\\
+&=\frac{1}{3}\pi2r\frac{dr}{dt}h_{1}+\frac{1}{3}\pi r^2\frac{dh_{1}}{dt}\\
+&=\frac{\pi}{3}\left(2h_{1}r\frac{dr}{dt}+r^2\frac{dh_{1}}{dt}\right)\\
+\\
+\frac{dV_{2}}{dt}&=900\pi\frac{dh_{2}}{dt}
+\\
+\\
+\frac{dh_{1}}{dt}&=2\frac{dr}{dt}
+\end{align*}
+\underline{Step 5:} From the set up of the problem, the rate at which the volume of water in the cone is decreasing is equal to the rate at which the volume of the water in the cylinder is increasing. Therefore, $\dfrac{dV_{2}}{dt}=-\dfrac{dV_{1}}{dt}$. We are trying to find $\dfrac{dh_{2}}{dt}$ when $h_{1}= 4$. From step 3, we see that when $h_{1} = 4$, we have $r=2$.  
+\\
+\\Now we plug in $h_{2} = 4$, $r=2$, and $\dfrac{dh_{1}}{dt}=-2$ into the equations in step 4. 
+\begin{align*}
+-2=2\frac{dr}{dt}\implies \frac{dr}{dt}=-1
+\end{align*}
+\begin{align*}
+\frac{dV_{1}}{dt}&=\frac{\pi}{3}(2(4)(2)(-1)+(2)^2(-2))=-8\pi\\
+\implies 8\pi &= -\frac{dV_{1}}{dt}=\frac{dV_{2}}{dt}=900\pi\frac{dh_{2}}{dt}\\
+\implies \frac{dh_{2}}{dt}&=\frac{2}{225}
+\end{align*}
+\\
+Therefore, the rate of change of the height of the water in the cylinder when the height of the water in the cone is $4\ cm$ is equal to $\dfrac{2}{225}$ cm/sec.
+ \end{enumerate}
+\end{document}
+
+

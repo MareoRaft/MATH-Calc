@@ -1,0 +1,75 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Notesheet. Section 5.6: Exponential Functions as Mathematical Models}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+Consider a quantity \(Q\) that is growing (decreasing) over time,
+\(t\). Then, we say a quantity exhibits \de{exponential growth
+  (decay)} if
+\end{defi}
+\begin{ex}
+  Given that a quantity \(Q(t)\) is described by the function \[
+    Q(t) = 300 e^{0.02 t}
+  \]
+  where \(t\) is measured in minutes, answer the following questions.
+  \begin{enumerate}
+  \item What is the growth constant?
+  \item What quantity is present initially (that is, at \(t=0\)).
+  \item Compute the following values: \(Q(10), Q(100), Q(1000)\)
+  \end{enumerate}
+\end{ex}
+\begin{ex}
+  Under ideal conditions, a certain bacteria population is known to
+  double every three hours. Suppose that there are initially \(100\)
+  bacteria.
+  \begin{enumerate}
+  \item What is the size of the population after \(15\) hours?
+    \vspace{0.75in}
+  \item Write down an equation for \(Q(t)\) in the form \(Q(t) = Q_0
+    2^{kt}\) where \(Q(0) = 100\) and \(Q(15)\) is what you found
+    above.
+    \vspace{0.75in}
+  \item Use your equation to estimate the size of the population after
+    \(20\) hours.
+    \vspace{0.75in}
+  \item Using exponential and log tricks/rules, rewrite your equation in the
+    form \(Q(t) = Q_0 e^{k_2 t}\).
+    \vspace{0.75in}
+  \end{enumerate}
+\end{ex}
+\vspace{-2in}
+\begin{defi}
+  Radioactive substances decay exponentially. The \de{half-life of a
+    radioactive substance} is
+\end{defi}
+\vspace{-0.5in}
+\begin{ex}
+  Carbon dating is the process using radioactive decay of Carbon 14 to
+  determine the age of a fossil. Carbon 14 has a half-life of 5730
+  years. If we model its decay by an exponential decay function \(Q(t)
+  = Q_0 e^{kt}\) (remember decay means \(k < 0\)), what is its decay constant, \(k\)? After \(11460\)
+  years (\(2\) half lives), how fast is Carbon 14 decaying?
+  \begin{enumerate}
+  \item Our goal is to solve for \(k\). Since we know \(1\) half-life
+    is \(5730\) years, \(Q(5730) =
+    \frac{1}{2}Q_0\). Divide both sides by \(Q_0\).
+    \vspace{0.75in}
+  \item Use the natural logarithm (\(\ln\)) to solve for \(k\).
+    \vspace{0.75in}
+  \item Take the derivative of \(Q(t)\).
+    \vspace{0.75in}
+  \item Plug in \(Q'(11460)\). (Your final answer will involve a
+    \(Q_0\) term.)
+  \end{enumerate}
+\end{ex}
+\vspace{-2in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

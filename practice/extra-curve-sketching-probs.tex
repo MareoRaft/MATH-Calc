@@ -1,0 +1,165 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=2cm, bottom=3cm, top=2cm]{geometry}
+% \usepackage[margin=1.0in]{geometry}
+% \usepackage{textpos}
+% \everymath{\displaystyle}
+
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{extramarks}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{enumitem}
+\usepackage{notesheets/notesheets}
+
+\pagestyle{fancy}
+
+\newtheoremstyle{mainstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {70pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+\newtheoremstyle{longstyle}
+  {20pt plus 4pt minus 4pt} % Space above
+  {170pt plus 4pt minus 4pt} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
+\theoremstyle{mainstyle} % this applies to ALL following new theorems % SEE research seminar, week 10 writeup for a possible way to exclude amsthm and [thm].
+
+
+\newtheorem{thrm}[thm]{Theorem}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{propo}[thm]{Proposition}
+\newtheorem{lemm}[thm]{Lemma}
+\newtheorem{examp}[thm]{Example}
+
+\theoremstyle{longstyle}
+\newtheorem{ex}[thm]{Challenge}
+
+
+
+\everymath{\displaystyle}
+
+\newcommand{\vs}{\vspace{8pt}}
+
+
+\pagenumbering{gobble}
+\setlength\parindent{0pt}
+%
+% Create Problem Sections
+%
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak\
+{}
+\nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} contin\
+ued on next page\ldots}\nobreak{}
+}
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} contin\
+ued on next page\ldots}\nobreak{}
+\stepcounter{#1}
+\nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will
+% adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this
+% template for an
+% example.
+%                                                          ~%
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+
+\newenvironment{homeworkProblem}[1][-1]{
+\ifnum#1>0
+\setcounter{homeworkProblemCounter}{#1}
+\fi
+\subsubsection{Problem \arabic{homeworkProblemCounter}}
+\setcounter{partCounter}{1}
+\enterProblemHeader{homeworkProblemCounter}
+}{
+  \vspace{35ex}
+  \exitProblemHeader{homeworkProblemCounter}
+}
+\newcommand{\footer}{
+\rfoot{\ifthenelse{\value{page}=1}{\textbf{This quiz has 2 sides}}{}}
+}
+\newcommand{\header}{
+a\lhead{\large MATH 1210}
+\chead{\large Implicit Differentiation \& 1st Deriv
+  Applications Quiz} 
+\rhead{\large Fall 2017}
+{{Name and computing ID:} \underline{\hspace{3in}}}\\ \ \\
+\fbox{
+\begin{minipage}{6.5 in}
+\textit{On my honor as a student, I pledge that I have neither given nor received help on this assignment.} \\ \ \\
+{Signature:} {\underline {\hspace{3in}}}
+\end{minipage}}
+}
+
+\everymath{\displaystyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1210}
+\title{Curve Sketching Practice Problems}
+
+\begin{document}
+\maketitle
+% \begin{textblock*}{100mm}(.65\textwidth,-5.3cm)
+%   Name:\underline{\qquad\qquad\qquad\qquad\qquad\qquad}
+% \end{textblock*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{homeworkProblem}
+  Let \[
+    f(x) = 2x^3+3x^2-12x
+  \]
+  Sketch the graph of $f$. Clearly label any $x$ and $y$ intercepts, horizontal asymptotes, vertical asymptotes, relative max pairs, relative min pairs, and inflection points. 
+\end{homeworkProblem}
+\begin{homeworkProblem}
+  Suppose $f$ is a function with all of the following properties:
+\begin{enumerate}
+\item $f$ has domain$=(-\infty, 2)\cup (2,\infty)$.
+\item $f$ has x-intercepts $-3$, $4$, $7$, and $9$. $f$ has y-intercept $6$. 
+\item $\lim\limits_{x\to\infty}f(x) = \infty$ and $\lim\limits_{x\to-\infty}f(x) = -5$. Also, $f$ has a vertical asymptote $x=2$. $f$ has the following behavior near this vertical asymptote:
+\begin{align*}
+\lim\limits_{x\to 2^{+}}f(x) = -\infty\hspace{2em}\text{and}\hspace{2em}\lim\limits_{x\to 2^{-}}f(x) = \infty
+\end{align*}
+\item $f$ is increasing on $(-\infty, 2)$, $(2, 5)$, and $(8, \infty)$. $f$ is decreasing on $(5,8)$
+\item $f$ has a relative max pair of $(5,3)$ and a relative min pair of $(8, -1)$. 
+\item $f$ is concave up on $(-\infty, 2)$ and $(6, \infty)$. $f$ is concave down on $(2, 6)$. 
+\item $f$ has an inflection point $(6, 1)$. 
+\\
+\end{enumerate}
+  Sketch a possible graph of $f$. In other words, sketch the graph of a single function which has all of the properties listed above. Clearly label any $x$ and $y$ intercepts, horizontal asymptotes, vertical asymptotes, relative max pairs, relative min pairs, and inflection points.
+\end{homeworkProblem}
+\begin{homeworkProblem}
+  Let \[
+f(x) = \dfrac{x^2-8x-9}{x(x+1)}
+  \]
+  Sketch the graph of $f$. Clearly label any $x$ and $y$ intercepts, horizontal asymptotes, vertical asymptotes, relative max pairs, relative min pairs, and inflection points.
+\end{homeworkProblem}
+\end{document}

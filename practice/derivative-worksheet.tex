@@ -1,0 +1,159 @@
+\documentclass[reqno,psamsfonts]{amsart}
+
+
+%-------Packages---------
+\usepackage[margin=.5in]{geometry}
+\usepackage{nopageno}
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\DeclareMathOperator{\Hom}{Hom}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+%--------Meta Data: Fill in your info------
+\title{Math 1210\\Derivative Worksheet}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\noindent
+
+\subsection*{Limit Definition of the Derivative}
+Let $f$ be a function and $x$ be a real number. Then the derivative of $f$ at $x$, denoted $f'(x)$ or $\frac{d}{dx}[f(x)]$, is defined by
+\begin{align*}
+f'(x)=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}\hspace{2em}\text{provided this limit exists.}
+\end{align*}
+If the above limit exists, we say that $f$ is differentiable at $x$, otherwise we say that $f$ is not differentiable at $x$.
+
+\subsection*{Geometric Interpretation of the Derivative} If $f$ is differentiable at $x$, then $f'(x)$ is the slope of the line tangent to the graph of $f$ at the point $(x, f(x))$.
+
+\subsection*{Rate of Change Interpretation of the Derivative} If $f$ is differentiable at $x$, then $f'(x)$ is the instantaneous rate of change of $f$ with respect to $x$.
+
+\subsubsection*{Examples}
+\begin{enumerate}
+\item If $p(t)$ is position at time $t$, then $p'(t)$ is instantaneous velocity at time $t$.
+\item If $v(t)$ is velocity at time $t$, then $v'(t)$ is instantaneous acceleration at time $t$.
+\item If $C(x)$ is the cost of producing $x$ goods, then $C'(x)$ is marginal cost.
+\end{enumerate}
+
+\subsection*{Differentiation Rules}
+\begin{enumerate}
+\item Let $f(x)= c$ be a constant function. Then, $f'(x) = 0$.
+\item Let $f$ be differentiable at $x$ and let $c$ be a constant. Then
+\begin{align*}
+\frac{d}{dx}[cf(x)]= c\frac{d}{dx}[f(x)]
+\end{align*}
+
+\item (Power Rule) Let $n$ be any real number. Then,
+\begin{align*}
+\frac{d}{dx}x^n=nx^{n-1}
+\end{align*}
+
+\item (Sum Rule) Let $f$ and $g$ be two functions such that $f$ and $g$ are both differentiable at $x$. Then,
+\begin{align*}
+(f+g)'(x) = f'(x)+g'(x)
+\end{align*}
+
+\item (Product Rule)
+Let $f$ and $g$ be two functions such that $f$ and $g$ are both differentiable at $x$. Then
+\begin{align*}
+(fg)'(x) = f'(x)g(x)+f(x)g'(x)
+\end{align*}
+
+\item (Quotient Rule) Let $f$ and $g$ be two functions such that $g(x)\neq 0$ and $f$ and $g$ are both differentiable at $x$. Then,
+
+\begin{align*}
+\left(\frac{f}{g}\right )'(x) = \frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}
+\end{align*}
+
+\item (Chain Rule) Let $f$ and $g$ be two functions such that $f$ is differentiable at $x$ and $g$ is differentiable at $f(x)$. Then,
+\begin{align*}
+(g\circ f)'(x) = g'(f(x))f'(x)
+\end{align*}
+
+\item (Generalized Power rule)
+Let $f$ be differentiable at $x$ and let $n$ be a real number. Then
+\begin{align*}
+\frac{d}{dx}[f(x)]^n=n[f(x)]^{n-1}f'(x)
+\end{align*}
+\end{enumerate}
+
+\begin{thm}
+Let $f$ be a function. If $f$ is differentiable at $x$, then $f$ is continuous at $x$.
+\end{thm}
+An equivalent way to say the above theorem is that if $f$ is not continuous at $x$, then $f$ is not differentiable at $x$. This is the contrapositive of the theorem 0.1.
+
+\subsection*{Warning:} The converse of theorem 0.1 is not true. In other words, $f$ being continuous at $x$ \textbf{DOES NOT} imply that $f$ is differentiable at $x$. Here is an example illustrating that:
+
+\subsubsection*{Example} Let $f(x) = |x|$. Then $f$ is continuous at $0$, but not differentiable at $0$.
+
+\newpage
+\subsection*{Practice Problems}
+
+\begin{enumerate}
+\vspace{1em}
+\item In each of the following problems calculate $f'(x)$.
+\vspace{1em}
+\begin{enumerate}
+\item $f(x) = (x+1)^7+x^2+3215$
+\vspace{3em}
+\item $f(x) = (x^2+\pi)\sqrt{3x^2+8}$
+\vspace{3em}
+\item $f(x) = (-6x^8+(2x+1)^{4/3}+1)^{2/7}$
+\vspace{3em}
+\item $f(x) = \dfrac{x^2}{\sqrt{7x^4+x^2+1}}$
+\vspace{3em}
+\item $f(x) = \dfrac{(20-x^7+x)^2}{1-x}$
+\vspace{3em}
+\end{enumerate}
+
+\item Suppose $f(4)=-27$ and $f'(4)=9$. Let $h(x) = f(x^3+x-6)$. Calculate $h'(2)$.
+\vspace{3em}
+\item Find an equation of the line tangent to $f(x) =3x^{7/3}+x$ at $x=8$.
+\vspace{3em}
+\item Let $f(x) = 11\sqrt{x}$. Use the limit definition of the derivative to calculate $f'(x)$.
+\vspace{3em}
+\item (Challenging) Let $g(x) = x^{2/3}+4$. Use the limit definition of the derivative to calculate $g'(x)$.  (Note: this problem is difficult, and would not appear on an exam)
+\vspace{3em}
+\item Let $h(x) = x^{3}$. Use the limit definition of the derivative to calculate $h'(x)$.
+\end{enumerate}
+\end{document}
+
