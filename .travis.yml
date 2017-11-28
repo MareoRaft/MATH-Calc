@@ -31,7 +31,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: APIKEYHERE=
+    secure: vYNWqSsWfr8CWd45K3cHIS8h/ZEwH17h4QNuYnNiokzOeKjlqZncorCqszK3FzIrmpscBljqU3Pp0UmI/fYcmXcz6Iy7tL53apRFEXnz4B6IQ4toWxczkRUlS3GGC6UoirdXQBWnZBH3Bb2ItFE+UG8wjAwSIveSxc5evA5MbCiNXgAEi2VMAc33llldRlcWNnAI6R2uTsoweaUVPw11Bk8xMFf/cbFvgNAg332xt/Rqs5jkAevkrmNPJbhoanpzEtB9CWCYIu9MIQPDhytIIDZI1e/WzhsysatjhnEiHYpP5PwDNX5duzdVl8wnb3RXCmvLh2DysZPULfwvS2uaqHKiBpy9njagdqe19I154j3iwbKTvKd/QS9aIa2R4crRlwTh4ErE6NtXhDhYDqBIejSLIFQYpcZEp+/fAo+a6IDcWKRwElmrcXY1dQpWQkBgJiDctuk1PVd1h3RKre701ZxmTXlX4yak/yXE10khm/Ppd1gXg8jyXg7s4ChrEl2/jM9TVxW5imj6cChhCCo1hUKcHcN5DM2q04LALcN6YDZIev0lRpXjoKFmrdZ6X/SQKG/a+Hn9uoCi4kidJhIyWXo6ajpA0P4apwU0lppU2im1CFwDCLk/mEaWiiCX8iQckIjLYybICZ2QIUF4qy1pJhCMvVlvpg4X05dv1C9yqDk=
   file:
   - _build/algebra.pdf
   - _build/complex-analysis-notes.pdf
