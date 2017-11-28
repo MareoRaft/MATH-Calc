@@ -1,0 +1,11 @@
+inputenc
+geometry
+textpos
+amssymb
+mathrsfs
+amsmath
+amsthm
+tikz
+upgreek
+color
+enumitem

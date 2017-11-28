@@ -14,7 +14,7 @@ before_install:
 - sudo apt-get install latexmk
 - tlmgr update --self
 - tlmgr update --all
-- tlmgr install $(cat .tlmgr-dep)
+- tlmgr install $(cat .tex-dependencies)
 script:
 - mkdir _build
 - cd notesheets
