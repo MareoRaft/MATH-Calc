@@ -27,6 +27,7 @@ script:
 - echo 'do the same thing in practice folder. maybe make a func where we input "notesheets" and it does the above.  then input "practice".'
 
 before_deploy:
+- echo 'do things before deploy, such as edit .gitignore'
 deploy:
   provider: releases
   skip_cleanup: true
@@ -36,11 +37,6 @@ deploy:
   - _build/algebra.pdf
   - _build/complex-analysis-notes.pdf
   - _build/differential-topology-notes.pdf
-  - _build/richards-algebra-book.pdf
-  - _build/richards-algebra-book-ii.pdf
-  - _build/algebraic-topology.pdf
-  - _build/real-analysis-notes.pdf
-  - ALL PDF files in _BUILD
   on:
-    repo: mareoraft/MATH-1210
+    repo: MareoRaft/MATH-1210
     branch: master
