@@ -12,10 +12,12 @@ script: # REQUIRED in order for Travis to not error
     # F2=$(echo "$F1" | sed s@.tex$@.pdf$@g)
     F2="$F1" # temporary replacement of above line
     F2="docs/$F2"
+    echo "$F2"
     mv "$F1" "$F2"
   done
+- ls docs/**/*
 # Edit webpages to include links for those pdfs
-- echo "[click me](testoutput.pdf)" >> docs/1220.md
+- echo "[click me](notesheets/testoutput.pdf)" >> docs/1220.md
 deploy:
   provider: pages
   skip_cleanup: true
