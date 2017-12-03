@@ -7,5 +7,6 @@ script: # REQUIRED in order for Travis to not error
 deploy:
   provider: pages
   skip_cleanup: true
+  github_token: $GITHUB_API_KEY # see settings in Travis
   on:
     branch: master
