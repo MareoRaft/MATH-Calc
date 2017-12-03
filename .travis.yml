@@ -3,15 +3,11 @@ cache:
   directories:
   - texlive
 script: # REQUIRED in order for Travis to not error
-- echo 'REQUIRED in order for Travis to not error'
-- echo 'Now we attempt to alter the website stuff'
-- pwd
-- cd docs
-- echo "hi, i'm travis editing your website" >> 1220.md
+- echo 'my script'
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_API_KEY # see settings in Travis
-  local_dir: docs # Not necessary, but makes pages deployment lightweight
+  local_dir: docs
   on:
     branch: master
