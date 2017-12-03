@@ -4,7 +4,7 @@ cache:
   - texlive
 script: # REQUIRED in order for Travis to not error
 - echo 'my script'
-- echo "hi, i'm travis editing your website" >> docs/1220.md
+- echo "hi, i'm travis editing your website. gpages now updating from gh-pages" >> docs/1220.md
 deploy:
   provider: pages
   skip_cleanup: true
