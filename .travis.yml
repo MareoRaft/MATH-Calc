@@ -2,8 +2,8 @@ sudo: required
 cache:
   directories:
   - texlive
-before_install:
-- echo 'before install'
+script: # REQUIRED in order for Travis to not error
+- echo 'my script'
 deploy:
   provider: pages
   skip_cleanup: true
