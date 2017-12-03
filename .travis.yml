@@ -2,12 +2,8 @@ sudo: required
 cache:
   directories:
   - texlive
-before_deploy:
-- echo 'do things before deploy, such as edit .gitignore'
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: docs/
-  github_token: $GITHUB_TOKEN
   on:
     branch: master
