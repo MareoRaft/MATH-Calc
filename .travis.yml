@@ -2,8 +2,8 @@ sudo: required
 cache:
   directories:
   - texlive
-script:
-- echo 'script'
+before_install:
+- echo 'before install'
 deploy:
   provider: pages
   skip_cleanup: true
