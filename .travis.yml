@@ -21,9 +21,9 @@ script: # REQUIRED in order for Travis to not error
 - |
   for FPATH in $(ls notesheets | grep ''); do
     echo "$FPATH"
-    FNAME=$(echo "$FPATH" | sed s@^notesheets/@@g)
+    FNAME=$(printf "$FPATH" | sed s@^notesheets/@@g)
     NAME="notesheet-""$FNAME"
-    echo "[$NAME]($FPATH)" >> docs/1220.md
+    echo "[$NAME]($FPATH)" >> 1220.md
   done
 - cd ..
 deploy:
