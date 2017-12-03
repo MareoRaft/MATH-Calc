@@ -19,12 +19,12 @@ script: # REQUIRED in order for Travis to not error
 # Edit webpages to include links for those pdfs
 - cd docs
 - |
-  for FPATH in $(ls notesheets/**/* | grep ''); do
-    echo "$FPATH"
-    FNAME=$(printf "$FPATH" | sed s@^notesheets/@@g)
+  for FNAME in $(ls notesheets | grep ''); do
     echo "$FNAME"
-    NAME="notesheet-""$FNAME"
+    NAME="notesheet-section-""$FNAME"
     echo "$NAME"
+    FPATH="notesheets/$FNAME"
+    echo "$FPATH"
     echo "[$NAME]($FPATH)" >> 1220.md
   done
 - cd ..
