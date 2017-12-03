@@ -8,5 +8,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_API_KEY # see settings in Travis
+  local_dir: docs
   on:
     branch: master
