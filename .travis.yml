@@ -4,7 +4,18 @@ cache:
   - texlive
 script: # REQUIRED in order for Travis to not error
 - echo 'my script'
-- echo "hi, i'm travis editing your website. gpages now updating from gh-pages" >> docs/1220.md
+# Create output pdfs
+- mkdir docs/notesheets
+- |
+  for F1 in $(ls notesheets/*.pdf | grep ''); do
+    echo "$F1"
+    # F2=$(echo "$F1" | sed s@.tex$@.pdf$@g)
+    F2="$F1" # temporary replacement of above line
+    F2="docs/$F2"
+    mv "$F1" "$F2"
+  done
+# Edit webpages to include links for those pdfs
+- echo "[click me](testoutput.pdf)" >> docs/1220.md
 deploy:
   provider: pages
   skip_cleanup: true
