@@ -22,9 +22,16 @@ script: # REQUIRED in order for Travis to not error
     echo "Moving to $DIR and compiling all .tex"
     cd "$DIR"
     latexmk -pdf -interaction=nonstopmode
+    echo "$?" >> ../exit-codes.txt
     cd ..
     echo "Left $DIR"
   done
+  # Look for non-zero return codes
+  RETCODE=0
+  for CODE in $(cat exit-codes.txt); do
+    RETCODE=$(($RETCODE|$CODE))
+  done
+  exit $RETCODE
 # Move PDFs to correct location
 - |
   for DIR in $(ls -d */ | grep ''); do

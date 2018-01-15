@@ -37,6 +37,7 @@ subfiles
 textpos
 tikz-cd
 times
+tkz-euclide
 tocloft
 todonotes
 tools
