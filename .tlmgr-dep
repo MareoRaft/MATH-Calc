@@ -33,6 +33,7 @@ pgfplots
 psnfss
 setspace
 subfiles
+textpos
 tikz-cd
 times
 tocloft
