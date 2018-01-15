@@ -41,25 +41,27 @@ script: # REQUIRED in order for Travis to not error
 - ls docs/**/*
 # Edit webpages to include links for those pdfs
 - cd docs
-- write_section_links() {
--   DIR_NAME="$1"
--   OUTPUT_FILENAME="$2"
--   OUTPUT_SECTION_TITLE="$3"
--   OUTPUT_LINK_PREFIX="$4"
--   printf "## $OUTPUT_SECTION_TITLE\n" >> "$OUTPUT_FILENAME"
--   for FNAME in $(ls "$DIR_NAME" | grep ''); do
--       NAME="$OUTPUT_LINK_PREFIX""$FNAME"
--       FPATH="$DIR_NAME/$FNAME"
--       printf "[$NAME]($FPATH)\n" >> "$OUTPUT_FILENAME"
--   done
--   printf "\n" >> "$OUTPUT_FILENAME"
-- }
-- write_file_links() {
--   COURSE_NUM="$1"
--   FILENAME="$COURSE_NUM.md"
--   write_section_links "notesheets-$COURSE_NUM" "$FILENAME" "Notesheets" "notesheet-section-"
--   write_section_links "practice-$COURSE_NUM" "$FILENAME" "Supplementary Material" ""
-- }
+- |
+  write_section_links() {
+    DIR_NAME="$1"
+    OUTPUT_FILENAME="$2"
+    OUTPUT_SECTION_TITLE="$3"
+    OUTPUT_LINK_PREFIX="$4"
+    printf "## $OUTPUT_SECTION_TITLE\n" >> "$OUTPUT_FILENAME"
+    for FNAME in $(ls "$DIR_NAME" | grep ''); do
+        NAME="$OUTPUT_LINK_PREFIX""$FNAME"
+        FPATH="$DIR_NAME/$FNAME"
+        printf "[$NAME]($FPATH)\n" >> "$OUTPUT_FILENAME"
+    done
+    printf "\n" >> "$OUTPUT_FILENAME"
+  }
+- |
+  write_file_links() {
+    COURSE_NUM="$1"
+    FILENAME="$COURSE_NUM.md"
+    write_section_links "notesheets-$COURSE_NUM" "$FILENAME" "Notesheets" "notesheet-section-"
+    write_section_links "practice-$COURSE_NUM" "$FILENAME" "Supplementary Material" ""
+  }
 - write_file_links "1210"
 - write_file_links "1220"
 - cd ..
