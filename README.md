@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MareoRaft/MATH-Calc.svg?branch=master)](https://travis-ci.org/MareoRaft/MATH-Calc)
+
 ## [MATH-1210](https://mareoraft.github.io/MATH-Calc/1210.html)
 
 ## [MATH-1220](https://mareoraft.github.io/MATH-Calc/1220.html)

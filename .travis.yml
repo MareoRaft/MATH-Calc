@@ -5,15 +5,25 @@ cache:
 script: # REQUIRED in order for Travis to not error
 - echo 'my script'
 # Create output pdfs
-- mkdir docs/notesheets-1210
 - |
-  for F1 in $(ls notesheets-1210/*.pdf | grep ''); do
-    echo "$F1"
-    # F2=$(echo "$F1" | sed s@.tex$@.pdf$@g)
-    F2="$F1" # temporary replacement of above line
-    F2="docs/notesheets-1210/$F2"
-    echo "$F2"
-    mv "$F1" "$F2"
+  for DI in $(ls -d */ | grep ''); do
+    echo "Moving to $DI and compiling all .tex"
+    cd "$DI"
+    latexmk -pdf -interaction=nonstopmode
+    cd ..
+    echo "Leaving $DI"
+  done
+# Move PDFs to correct location
+- |
+  for DI in $(ls -d */ | grep ''); do
+    mkdir docs/$DI
+    for F1 in $(ls "$DI"*.pdf | grep ''); do
+      echo "Moving $F1 to docs/$DI folder"
+      F2="$F1" # temporary replacement of above line
+      F2="docs/$F2"
+      echo "$F2"
+      mv "$F1" "$F2"
+    done
   done
 - ls docs/**/*
 # Edit webpages to include links for those pdfs
