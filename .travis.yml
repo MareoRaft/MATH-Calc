@@ -14,27 +14,25 @@ before_install:
 - sudo apt-get install latexmk
 - tlmgr update --self
 - tlmgr update --all
-- tlmgr install $(cat .tlmgr-dep)
+- tlmgr install $(cat .tex-deps)
 script: # REQUIRED in order for Travis to not error
 # Create output pdfs
 - |
-  for DI in $(ls -d */ | grep ''); do
-    echo "Moving to $DI and compiling all .tex"
-    cd "$DI"
+  for DIR in $(ls -d */ | grep ''); do
+    echo "Moving to $DIR and compiling all .tex"
+    cd "$DIR"
     latexmk -pdf -interaction=nonstopmode
     cd ..
-    echo "Leaving $DI"
+    echo "Left $DIR"
   done
 # Move PDFs to correct location
 - |
-  for DI in $(ls -d */ | grep ''); do
-    mkdir docs/$DI
-    for F1 in $(ls "$DI"*.pdf | grep ''); do
-      echo "Moving $F1 to docs/$DI folder"
-      F2="$F1"
-      F2="docs/$F2"
-      echo "$F2"
-      mv "$F1" "$F2"
+  for DIR in $(ls -d */ | grep ''); do
+    mkdir "docs/$DIR"
+    for FILENAME1 in $(ls "$DIR"*.pdf | grep ''); do
+      PATH_REL_DEST="docs/$FILENAME1"
+      echo "Moving $FILENAME1 to docs/$DIR folder"
+      mv "$FILENAME1" "$PATH_REL_DEST"
     done
   done
 - ls docs/**/*
