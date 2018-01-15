@@ -16,7 +16,6 @@ before_install:
 - tlmgr update --all
 - tlmgr install $(cat .tlmgr-dep)
 script: # REQUIRED in order for Travis to not error
-- echo 'my script'
 # Create output pdfs
 - |
   for DI in $(ls -d */ | grep ''); do
@@ -32,7 +31,7 @@ script: # REQUIRED in order for Travis to not error
     mkdir docs/$DI
     for F1 in $(ls "$DI"*.pdf | grep ''); do
       echo "Moving $F1 to docs/$DI folder"
-      F2="$F1" # temporary replacement of above line
+      F2="$F1"
       F2="docs/$F2"
       echo "$F2"
       mv "$F1" "$F2"
