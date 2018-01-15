@@ -1,4 +1,4 @@
-# [MATH-1210](https://mareoraft.github.io/MATH-Calc/1210.html)
+## [MATH-1210](https://mareoraft.github.io/MATH-Calc/1210.html)
 
 ## [MATH-1220](https://mareoraft.github.io/MATH-Calc/1220.html)
 
