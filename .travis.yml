@@ -50,7 +50,7 @@ script: # REQUIRED in order for Travis to not error
     for FNAME in $(ls "$DIR_NAME" | grep ''); do
         NAME="$OUTPUT_LINK_PREFIX""$FNAME"
         FPATH="$DIR_NAME/$FNAME"
-        printf "[$NAME]($FPATH)\n" >> "$OUTPUT_FILENAME"
+        printf "[$NAME]($FPATH)  \n" >> "$OUTPUT_FILENAME" # Two spaces before \n tells Markdown to generate <br />
     done
     printf "\n" >> "$OUTPUT_FILENAME"
   }
