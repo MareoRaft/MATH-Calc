@@ -13,6 +13,7 @@ datetime
 ec
 enumitem
 etoolbox
+fancyhdr
 float
 fmtcount
 geometry
@@ -37,6 +38,7 @@ subfiles
 textpos
 tikz-cd
 times
+tkz-base
 tkz-euclide
 tocloft
 todonotes
