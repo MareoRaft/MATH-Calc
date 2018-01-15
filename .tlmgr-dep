@@ -1,11 +1,14 @@
 amscls
 amsmath
+amssymb
+amsthm
 amsrefs
 bbm
 bbm-macros
 caption
 chngcntr
 collection-fontsrecommended
+color
 cslatex
 csplain
 csquotes
@@ -18,12 +21,14 @@ fmtcount
 geometry
 graphics
 hyperref
+inputenc
 jknapltx
 l3kernel
 l3packages
 latex-bin
 latexmk
 mathabx
+mathrsfs
 mathtools
 ms
 oberdiek
@@ -34,6 +39,7 @@ psnfss
 setspace
 subfiles
 textpos
+tikz
 tikz-cd
 times
 tocloft
@@ -41,6 +47,7 @@ todonotes
 tools
 txfonts
 ucs
+upgreek
 url
 was
 xcolor
