@@ -1,6 +1,6 @@
-[MATH-1210](https://mareoraft.github.io/MATH-Calc/1210.html)
+# [MATH-1210](https://mareoraft.github.io/MATH-Calc/1210.html)
 
-[MATH-1220](https://mareoraft.github.io/MATH-Calc/1220.html)
+## [MATH-1220](https://mareoraft.github.io/MATH-Calc/1220.html)
 
 This repository is for the University of Virginia MATH-1210 (Survey of Calculus I) and MATH-1220 (Survey of Calculus II) courses.  This repository was created by the instructors Matthew Lancellotti and George Seelinger, but other instructors are welcome to use it if they wish.  The repository contains content for our students.
 
