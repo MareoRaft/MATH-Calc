@@ -16,6 +16,7 @@ etoolbox
 fancyhdr
 float
 fmtcount
+fp
 geometry
 graphics
 hyperref
@@ -28,6 +29,7 @@ mathabx
 mathtools
 ms
 nopageno
+numprint
 oberdiek
 pgf
 pgfopts
