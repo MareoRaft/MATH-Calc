@@ -5,29 +5,40 @@ cache:
 script: # REQUIRED in order for Travis to not error
 - echo 'my script'
 # Create output pdfs
-- mkdir docs/notesheets
+- mkdir docs/notesheets-1210
 - |
-  for F1 in $(ls notesheets/*.pdf | grep ''); do
+  for F1 in $(ls notesheets-1210/*.pdf | grep ''); do
     echo "$F1"
     # F2=$(echo "$F1" | sed s@.tex$@.pdf$@g)
     F2="$F1" # temporary replacement of above line
-    F2="docs/notesheets/$F2"
+    F2="docs/notesheets-1210/$F2"
     echo "$F2"
     mv "$F1" "$F2"
   done
 - ls docs/**/*
 # Edit webpages to include links for those pdfs
 - cd docs
-- echo "## Notesheets" >> 1210.md
-- |
-  for FNAME in $(ls notesheets | grep ''); do
-    echo "$FNAME"
-    NAME="notesheet-section-""$FNAME"
-    echo "$NAME"
-    FPATH="notesheets/$FNAME"
-    echo "$FPATH"
-    echo "[$NAME]($FPATH)" >> 1210.md
-  done
+- write_section_links() {
+-   DIR_NAME="$1"
+-   OUTPUT_FILENAME="$2"
+-   OUTPUT_SECTION_TITLE="$3"
+-   OUTPUT_LINK_PREFIX="$4"
+-   printf "## $OUTPUT_SECTION_TITLE\n" >> "$OUTPUT_FILENAME"
+-   for FNAME in $(ls "$DIR_NAME" | grep ''); do
+-       NAME="$OUTPUT_LINK_PREFIX""$FNAME"
+-       FPATH="$DIR_NAME/$FNAME"
+-       printf "[$NAME]($FPATH)\n" >> "$OUTPUT_FILENAME"
+-   done
+-   printf "\n" >> "$OUTPUT_FILENAME"
+- }
+- write_file_links() {
+-   COURSE_NUM="$1"
+-   FILENAME="$COURSE_NUM.md"
+-   write_section_links "notesheets-$COURSE_NUM" "$FILENAME" "Notesheets" "notesheet-section-"
+-   write_section_links "practice-$COURSE_NUM" "$FILENAME" "Supplementary Material" ""
+- }
+- write_file_links "1210"
+- write_file_links "1220"
 - cd ..
 deploy:
   provider: pages
