@@ -29,10 +29,10 @@ script: # REQUIRED in order for Travis to not error
 - |
   for DIR in $(ls -d */ | grep ''); do
     mkdir "docs/$DIR"
-    for FILENAME1 in $(ls "$DIR"*.pdf | grep ''); do
-      PATH_REL_DEST="docs/$FILENAME1"
-      echo "Moving $FILENAME1 to docs/$DIR folder"
-      mv "$FILENAME1" "$PATH_REL_DEST"
+    for PATH_REL_SRC in $(ls "$DIR"*.pdf | grep ''); do
+      PATH_REL_DEST="docs/$PATH_REL_SRC"
+      echo "Moving $PATH_REL_SRC to docs/$DIR folder"
+      mv "$PATH_REL_SRC" "$PATH_REL_DEST"
     done
   done
 - ls docs/**/*
