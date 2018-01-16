@@ -18,12 +18,10 @@ before_install:
 script: # REQUIRED in order for Travis to not error
 # Create output pdfs
 - |
-#  pattern=" "
   for DIR in $(ls -d */ | grep ''); do
     echo "Moving to $DIR and compiling all .tex"
     cd "$DIR"
     for FI in $(ls | grep --regexp="\.tex$"); do
-#      FI="${FI//$pattern/\ }"
       echo "$FI"
       latexmk -pdf -interaction=nonstopmode "$FI"
       EXITCODE="$?"
@@ -36,7 +34,6 @@ script: # REQUIRED in order for Travis to not error
   # Look for non-zero return codes
   RETCODE=0
   for CODE in $(cat exit-codes.txt); do
-    echo "A document returned code $CODE"
     RETCODE=$(($RETCODE|$CODE))
   done
   cat exit-codes-with-filenames.txt
