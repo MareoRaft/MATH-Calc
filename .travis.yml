@@ -28,7 +28,7 @@ script: # REQUIRED in order for Travis to not error
       if [ $EXITCODE > 0 ]
       then
 	cat output.txt
-      fi  	
+      fi
       echo "$EXITCODE" >> ../exit-codes.txt
       echo "$FI $EXITCODE" >> ../exit-codes-with-filenames.txt
     done
