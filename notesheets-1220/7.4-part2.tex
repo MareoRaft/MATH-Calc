@@ -1,0 +1,53 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 7.4: Improper Integrals Part II}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  If there is a real number \(c\) such that \emph{both} of
+  \(\int_{-\infty}^c f(x) \dx\) and \(\int_c^{\infty} f(x) \dx\) are
+  convergent, then we say \(\int_{-\infty}^\infty f(x) \dx\) is \\
+
+  Furthermore, we compute it as \[
+    \int_{-\infty}^\infty f(x) \dx = \hspace{3in}
+  \]
+  Otherwise, if \(\int_{-\infty}^c f(x)\dx\) or \(\int_c^\infty f(x)
+  \dx\) are divergent for some \(c\), then we say
+  
+  \(\int_{-\infty}^\infty f(x) \dx\) is
+\end{defi}
+\begin{ex}
+  Evaluate \(\int_{-\infty}^\infty \frac{2x}{(x+1)^2} \dx\) if it converges.
+\end{ex}
+\begin{ex}
+  Determine if \(\int_{-\infty}^\infty x \dx\) converges. Before using
+  any calculus, what does your intuition tell you?
+\end{ex}
+\begin{ex}
+  True or False? \(\int_{-\infty}^\infty f(x) \dx = \lim_{t \to
+    \infty} \int_{-t}^t f(x)\dx\)?
+\end{ex}
+\begin{ex}
+  Evaluate \(\int_{-\infty}^\infty x e^{-\frac{1}{2}x^2} \dx\) if it
+  converges. 
+\end{ex}
+\begin{ex}
+  Using some of what we have already seen, for which real numbers
+  \(p\) is the following integral convergent? \[
+    \int_1^\infty \frac{1}{x^p} \dx
+  \]
+\end{ex}
+\begin{rmk}
+  Later we will use the fact that \[
+    \int_{-\infty}^\infty e^{-\frac{1}{2}x^2} \dx = 
+  \]
+  for many probability problems.
+\end{rmk}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
