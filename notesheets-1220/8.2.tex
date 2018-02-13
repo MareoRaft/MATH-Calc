@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 8.2: Partial Derivatives}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3in}
+Remember that the derivative of \(f(x)\) at \(x=a\) is the ``rate of
+change of \(f(x)\) at \(x=a\)'' and is defined by \[
+  f'(a) := \lim_{h \to 0} \frac{f(a+h)-f(a)}{h}.
+\]
+With multivariable functions, ``rate
+of change'' is ambiguous if we do not define which input we are
+changing.
+\begin{defi}
+  Let \(f(x,y)\) be a function in two variables. We define the
+  \de{partial derivatives} as
+  \begin{enumerate}
+  \item \(f_x(x,y) = \frac{\partial}{\partial x}f(x,y) = \)
+  \item \(f_y(x,y) = \frac{\partial}{\partial y}f(x,y) = \)
+  \end{enumerate}
+  That is, \(f_x(x,y)\) is the rate of change of \(f(x,y)\) if \(x\)
+  is varied and \(y\) is fixed and the opposite for \(f_y(x,y)\).
+\end{defi}
+\begin{ex}
+  Let \(f(x,y) = x^2+xy+y^2\). Compute \(f_x\) and \(f_y\). Let
+  \(g(x,y) = e^{x^2}\sin(y)\). Compute \(g_x\) and \(g_y\).
+\end{ex}
+\begin{rmk}
+  \begin{enumerate}
+  \item   We compute partial derivatives, say \(\frac{\partial}{\partial
+    x}f(x,y)\), by letting the variable we are differentiating vary
+  and fixing all the others, so in this case, letting \(x\) vary and
+  pretending \(y\) is constant.
+  \item The chain rule, product rule, and the quotient rule all still
+    apply for partial derivatives.
+  \end{enumerate}
+\end{rmk}
+\begin{ex}
+  Evaluate \(f_x\) and \(f_y\) for the following functions
+  \begin{enumerate}
+  \item \(f(x,y) = \ln(7+xy^2)\)
+    \vspace{1in}
+  \item \(f(x,y) = \frac{x-y}{x+y}\)
+  \end{enumerate}
+\end{ex}
+\vspace{-1in}
+\begin{thrm}
+  Just like \(f'(a) = 0 \iff \) the tangent line of the graph of
+  \(f(x)\) is horizontal, the tangent plane of \(z=f(x,y)\) at
+  \((a,b)\) is horizontal if and only if 
+\end{thrm}
+\begin{defi}
+  \(\left(\frac{\partial}{\partial x}\right)^2 f(x,y) =
+  \frac{\partial^2}{\partial x^2} f(x,y) = f_{xx}(x,y)\) are
+  all different notation for the same second partial derivative. Similarly,
+  \(\frac{\partial}{\partial x}\left( \frac{\partial}{\partial y}
+    f(x,y) \right) = \frac{\partial^2}{\partial x \partial y} f(x,y) =
+  f_{yx}(x,y)\) are all different notations for the same partial derivative.
+\end{defi}
+\begin{ex}
+  Let \(f(x,y) = x^3 + x^2 y + y^2\). Compute \(f_{xx}(x,y),
+  f_{xy}(x,y), f_{yx}(x,y), \) and \(f_{yy}(x,y)\). Notice anything?
+  Hint: Compute 
+  \(f_x(x,y)\) and \(f_y(x,y)\) first. 
+\end{ex}
+\begin{thrm}
+  If \(f_{xy}\) and \(f_{yx}\) are continuous, then 
+\end{thrm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
