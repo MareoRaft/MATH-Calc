@@ -10,7 +10,7 @@
 \maketitle
 \nameline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-0.3in}
+\vspace{0.5in}
 \begin{defi}
   Let \(f(x,y)\) be a function defined on a region \(R\) containing
   the point \((a,b)\). Then,
@@ -28,6 +28,11 @@
     \de{absolute minimum value} \(f(a,b)\)if
   \end{itemize}
 \end{defi}
+\begin{ex}
+  Consider the function \(f(x,y) = x^2 + y^2\). Does this function
+  have any relative minima? Relative maxima? What is
+  \(f_x(0,0)\) and \(f_y(0,0)\)?
+\end{ex}
 \begin{thrm}
   If \(f(x,y)\) is a differentiable function of two variables and has
   a relative maximum (relative minimum) at a point \((a,b)\) in the
@@ -41,35 +46,5 @@
 \begin{defi}
   A \de{saddle point} is a point where 
 \end{defi}
-\vspace{-0.1in}
-\begin{ex}
-  Consider the function \(f(x,y) = (1-x^2) \sin(y)\). Compute the
-  following
-  \begin{enumerate}
-  \item \(f_x(0,0), f_y(0,0)\) and \(f_x(1,0),f_y(1,0)\).
-    \vspace{0.75in}
-  \item \(f_{xx}(0,0), f_{xy}(0,0), \) and \(f_{yy}(0,0)\)
-    \vspace{0.75in}
-  \item \(f_{xx}(1,0), f_{xy}(1,0),\) and \(f_{yy}(1,0)\)
-  \end{enumerate}
-\end{ex}
-\vspace{-1.5in}
-\begin{thrm}[The Second Derivative Test]
-  Let \(f(x,y)\) be a twice differentiable function with continuous
-  second derivatives. Let \[
-    D(a,b) = f_{xx}(a,b)f_{yy}(a,b) - [f_{xy}(a,b)]^2
-  \]
-  If \(f_x = 0\) and \(f_y = 0\),
-  \begin{enumerate}[label=(\alph*)]
-  \item \(D(a,b) > 0\) and \(f_{xx}(a,b) < 0\), then
-    \vspace{0.075in}
-  \item \(D(a,b) > 0\) and \(f_{xx}(a,b) > 0\), then
-    \vspace{0.075in}
-  \item \(D(a,b) < 0\), then
-    \vspace{0.075in}
-  \item \(D(a,b) = 0\), then
-  \end{enumerate}
-\end{thrm}
-\vspace{-0.5in}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \end{document}
