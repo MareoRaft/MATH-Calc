@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\author{Math 1220}
+\title{Notesheet. Section 8.4+8.7: The Method of Least Squares +
+  Double Integrals}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  Given \(n\) data points \((x_1,y_1), \ldots, (x_n,y_n)\), a \de{scatter
+    diagram} is 
+\end{defi}
+\begin{defi}
+  The \de{principle of least squares} states that the straight line
+  \(L\) that fits \(n\) data points best is
+  \vspace{0.2in}
+  The line \(L\) obtained in this manner is called the
+  \de{least-squares line}, or \de{regression line}.
+\end{defi}
+\begin{thrm}
+  Given \(n\) data points \((x_1,y_1), (x_2,y_2), \ldots, (x_n,y_n)\),
+  then the least squares (regression) line for the data is given by
+  the linear equation \[
+    y = f(x) = mx + b
+  \]
+  where the constants \(m\) and \(b\) satisfy the equations \[
+    \begin{cases}
+      \hspace{3in}\vspace{0.5in} \\
+      \
+    \end{cases}
+  \]
+\end{thrm}
+You will see why this is true in homework.
+\begin{ex}
+  The following data consists of the quiz grades for five students \\
+    \begin{tabular}{|c|c|c|}
+      \hline \text{Student}&\text{Quiz 1 Grade}&\text{Quiz 2 grade} \\
+      \hline 1&\(x_1 = 1\)& \(y_1 = 1\)\\
+      2&\(x_2 = 2\)&\(y_2 = 3\)\\
+      3&\(x_3=3\)&\(y_3 = 4\)\\
+      4&\(x_4=4\)&\(y_4=3\)\\
+      5&\(x_5=5\)&\(y_5=6\)\\
+      \hline
+    \end{tabular}
+  \end{ex}
+  \begin{ex}
+    Evaluate the following integrals by integrating with respect to
+    the appropriate variable and treating the other variable as a constant.
+    \begin{enumerate}
+    \item \(\int_0^1 xy^2 \dx\)
+      \vspace{1in}
+    \item \(\int_0^x (x+y)\ dy\)
+      \vspace{1in}
+    \item \(\int_1^2 \frac{x}{y^2} e^{x/y}\ dy\)
+      \vspace{1in}
+    \end{enumerate}
+  \end{ex}
+  \vspace{-2in}
+  \begin{ex}
+    Now, evaluate the \de{interated integrals} by doing the inside
+    integral and then the outside integral.
+    \begin{enumerate}
+    \item \(\int_0^1 \int_0^1 x y^2 \dx\ dy\)
+      \vspace{1in}
+    \item \(\int_0^1 \int_0^x (x+y)\ dy \dx\)
+      \vspace{1in}
+    \item \(\int_0^x \int_0^1 (x+y) \dx\ dy\)
+    \end{enumerate}
+
+  \end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
