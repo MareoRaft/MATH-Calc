@@ -27,10 +27,11 @@
   \item An \de{event} is
     \vspace{0.5in}
   \item A \de{random variable} (RV) \(X\) is a \\ \vspace{0.3in}\\
-    and it is called \de{continuous} if \hspace{2in} and \de{discrete}
-    if
+    and it is called \de{continuous} if \\
+    and \de{discrete} if
     \vspace{1in}
-  \item A \de{probability density function} (PDF) of \(X\) in an
+  \item A \de{probability density function} (PDF) of a random variable
+    \(X\) in an 
     interval \(I\) is a function \(f(x)\) such that
     \begin{enumerate}[label=(\roman*)]
     \item 
@@ -40,7 +41,7 @@
 \end{defi}
 \vspace{-0.6in}
 \begin{ex}
-  Are the following functions \(f \from S \to \R\) valid PDFs?
+  Are the following functions valid PDFs?
   \begin{enumerate}
   \item For rolling a \(6\)-sided die, let \(f(t) = \frac{1}{6}\) for
     \(t=1,\ldots,6\).
@@ -60,7 +61,8 @@
   [0,\infty)\) is a PDF.
 \end{ex}
 \begin{defi}
-  Let \([a,b] \subset S\). Then, the event \(E = ``a \leq X \leq b''\)
+  Let \([a,b] \subset I\), the interval for a continuous random
+  variable \(X\). Then, the event \(E = ``a \leq X \leq b\)''
   has probability \[
     P(a \leq X \leq b) = \hspace{2in}
   \]
@@ -75,14 +77,15 @@
   \item \(P(x < 1)\)
   \end{enumerate}
 \end{ex}
-\vspace{-2in}
+\vspace{-2.4in}
 \begin{ex}
   The life expectancy (in years) of a TV is a continuous RV with
   PDF \[
     f(t) = \frac{1}{2}e^{-\frac{t}{2}}, \ \ (0 \leq t < \infty)
   \]
   Find the probability that a randomly chosen TV will last more than
-  \(2\) years.
+  \(2\) years. (This distribution is called an \de{exponential density
+  function}.)
 \end{ex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \end{document}
