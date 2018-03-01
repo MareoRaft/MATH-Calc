@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\author{Math 1220}
+\title{Notesheet. Section 10.1: Probability Distributions and Random
+  Variables} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3in}
+\begin{rmk}
+  Recall that the probability of an event \(E\) occurring (such as
+  getting a \epsdice{2} on a \(6\)-sided die) is given by \[
+    P(E) = \hspace{2in}
+  \]
+  What is the probability of rolling an odd number on a \(6\)-sided
+  die?
+  \vspace{0.5in}
+\end{rmk}
+\begin{defi}
+  \begin{enumerate}
+  \item The \de{sample space} \(S\) of an experiement is
+  \item An \de{event} is
+    \vspace{0.5in}
+  \item A \de{random variable} (RV) \(X\) is a \\ \vspace{0.3in}\\
+    and it is called \de{continuous} if \\
+    and \de{discrete} if
+    \vspace{1in}
+  \item A \de{probability density function} (PDF) of a random variable
+    \(X\) in an 
+    interval \(I\) is a function \(f(x)\) such that
+    \begin{enumerate}[label=(\roman*)]
+    \item 
+    \item
+    \end{enumerate}
+  \end{enumerate}
+\end{defi}
+\vspace{-0.6in}
+\begin{ex}
+  Are the following functions valid PDFs?
+  \begin{enumerate}
+  \item For rolling a \(6\)-sided die, let \(f(t) = \frac{1}{6}\) for
+    \(t=1,\ldots,6\).
+    \vspace{0.3in}
+  \item For rolling a \(6\)-sided die, let \(f(6)=1\) and \(f(t)=0\)
+    for all other \(t\).
+    \vspace{0.3in}
+  \item \(S = [0,1]\). Let \(f(x)=x\).
+    \vspace{0.3in}
+  \item \(S = [0,1]\). Let \(f(x) = \frac{e^x}{e-1}\).
+    \vspace{0.3in}
+  \end{enumerate}
+\end{ex}
+\vspace{-2in}
+\begin{ex}
+  Find the value of \(k\) such that \(f(x) = k e^{-x}\) over \(S =
+  [0,\infty)\) is a PDF.
+\end{ex}
+\begin{defi}
+  Let \([a,b] \subset I\), the interval for a continuous random
+  variable \(X\). Then, the event \(E = ``a \leq X \leq b\)''
+  has probability \[
+    P(a \leq X \leq b) = \hspace{2in}
+  \]
+\end{defi}
+\begin{ex}
+  \(f(x) = \frac{1}{9} x^2\) on \([0,3]\) is a PDF. Evaluate the
+  following probabilities
+  \begin{enumerate}
+  \item \(P(1 \leq X \leq 3)\)
+  \item \(P(1 \leq X)\)
+  \item \(P(X=1)\)
+  \item \(P(x < 1)\)
+  \end{enumerate}
+\end{ex}
+\vspace{-2.4in}
+\begin{ex}
+  The life expectancy (in years) of a TV is a continuous RV with
+  PDF \[
+    f(t) = \frac{1}{2}e^{-\frac{t}{2}}, \ \ (0 \leq t < \infty)
+  \]
+  Find the probability that a randomly chosen TV will last more than
+  \(2\) years. (This distribution is called an \de{exponential density
+  function}.)
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}

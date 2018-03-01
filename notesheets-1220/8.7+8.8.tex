@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\author{Math 1220}
+\title{Notesheet. Section 8.7+8.8: Double Integrals + Geometric Applications}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  The \de{double integral} of \(f(x,y)\) over a region \(R\) is
+  denoted by \[
+    \iint_R f(x,y)\ dA = 
+  \]
+  and, if \(f(x,y) \geq 0\) over \(R\), then \[
+    \iint_R f(x,y)\ dA = 
+  \]
+\end{defi}
+\begin{rmk}
+  \begin{enumerate}
+  \item In practice, double integrals are evaluated using suitable iterated
+  integrals. 
+  \item A consequence of our definition is that, for a region \(R\),
+    \(\iint_R 1\ dA\) numerically gives
+  \end{enumerate}
+\end{rmk}
+\begin{thrm}
+  If \(R\) is a rectangular region defined by \(a \leq x \leq b\) and
+  \(c \leq y \leq d\), then \[
+    \iint_R f(x,y)\ dA = 
+  \]
+\end{thrm}
+\begin{ex}
+  Evaluate the double integral \(\iint_R 2xy \ dA\) where \(R\) is
+  the region defined by the inequalities \(0 \leq x \leq 1\) and \(0
+  \leq y \leq 1\).
+\end{ex}
+\begin{thrm}
+  \begin{enumerate}
+  \item   Suppose \(g_1(x)\) and \(g_2(x)\) are continuous functions on
+  \([a,b]\) and the region \(R\) is defined by \(R = \{(x,y) \mid
+  g_1(x) \leq y \leq g_2(x); a \leq x \leq b\}\). Then, \[
+    \iint_R f(x,y)\ dA = 
+  \]
+  \item Suppose \(h_1(y)\) and \(h_2(y)\) are continuous functions on
+    \([c,d]\) and the region \(R\) is defined by \(R = \{(x,y) \mid
+    h_1(y) \leq x \leq h_2(y); c \leq y \leq d\}\). Then, \[
+      \iint_R f(x,y)\ dA = 
+    \]
+  \end{enumerate}
+\end{thrm}
+\begin{ex}
+  Let \(R\) be the region bounded by \(x=-y\) and \(x=y\) for \(0 \leq
+  y \leq 1\). Evaluate \[
+    \iint_R 2xy\ dA
+  \]
+\end{ex}
+\begin{ex}
+  Let \(R\) be the region bounded by \(y=x^2\) and
+  \(y=4\). Evaluate \[
+    \iint_R y\ dA
+  \]
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
