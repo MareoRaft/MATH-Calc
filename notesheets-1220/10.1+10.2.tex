@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 10.1+10.2: Joint Distributions, Expected
+  Value, and Standard Deviation} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3in}
+\begin{defi}
+  A \de{joint probability dnesity function} of the random variables
+  \(X\) and \(Y\) on a region \(D\) is a function \(f(x,y)\) such that
+\end{defi}
+\begin{thrm}
+  The event \(E = ``(X,Y)''\) in \(R\) has probability \[
+    P[(X,Y) \text{ in } R] = \hspace{1in}
+  \]
+\end{thrm}
+\vspace{-0.5in}
+\begin{ex}
+  Show that \[
+    f(x,y) = \frac{1}{4}(x+2y); D = \{0 \leq x \leq 2; 0 \leq y \leq 1\}
+  \]
+  is a joint probability density function. Find the probability \(P(0
+  \leq X \leq 1; 0.5 \leq Y \leq 1)\).
+\end{ex}
+\begin{defi}
+  The \de{expected value} or \de{mean} \(E(X)\) of a random variable
+  \(X\) on an interval \(I\) is given by \[
+    E(X) = \hspace{1in}
+  \]
+  and refers to ``the value one would expect to find if one repeated
+  the experiment infinitely many times.''
+\end{defi}
+\begin{ex}
+  Let \(f(x) = \frac{e^x}{e-1}\)  be the PDF for \(X\) on
+  \(I=[0,1]\). Find \(E(X)\).
+\end{ex}
+\begin{defi}
+  The \de{variance} of a random variable \(X\) on \(I\) is given by \[
+    \Var(X) = \hspace{1in}
+  \]
+  and the \de{standard deviation} of \(X\) is \[
+    \sigma = \hspace{1in}
+  \]
+\end{defi}
+\vspace{-0.75in}
+\begin{rmk}
+  If we rewrite \(E(X) = \mu\), since \(E(X)\) is a constant, then we
+  get an easier formula for variance given by \[
+    \Var(X) = \hspace{1in}
+  \]
+\end{rmk}
+\begin{ex}
+  Let \(f(x) = \frac{e^x}{e-1}\)  be the PDF for RV \(X\) on
+  \(I=[0,1]\). Find \(\Var(X)\).
+\end{ex}
+\begin{ex}
+  Assume \(X\) is a \(RV\) on \(I\) with \(\Var(X) = 2\) and \(\int_I
+  x^2 f(x) \dx = 11\). Find \(E(X)\).
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
