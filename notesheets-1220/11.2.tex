@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 11.2: Infinite Sequences} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  An \de{infinite sequence} \(\{a_n\}\) is a function whose domain is
+  \\
+
+  The \de{terms} of the sequence are\\
+  
+  So, the \de{\(n\)th term} is 
+\end{defi}
+\begin{rmk}
+  Sometimes \(\{a_n\}\) is denoted \(\{a_n\}_{n=1}^\infty\). A
+  sequence also can begin at any natural number \(k\), e.g.
+  \begin{enumerate}
+  \item \(\left\{ \frac{n}{n+1} \right\}_{n=1}^\infty = \)
+  \item \(\left\{ (-1)^n n \right\}_{n=2}^\infty =\)
+  \item \(\left\{ (2n+1)! \right\}_{n=0}^\infty =\)
+  \end{enumerate}
+\end{rmk}
+\begin{ex}
+  Find a formula for the \(n\)th term of
+  \begin{enumerate}
+  \item \(\{a_n\}_{n=1}^\infty = \left\{\frac{1}{2}, \frac{1}{4},
+      \frac{1}{6}, \frac{1}{8}, \frac{1}{10}, \ldots \right\}\)
+  \item \(\{a_n\}_{n=1}^\infty = \left\{ -\frac{4}{5}, \frac{8}{9},
+      -\frac{16}{11}, \frac{32}{14}, -\frac{60}{17}, \ldots\right\}\)
+  \end{enumerate}
+\end{ex}
+\vspace{-0.5in}
+\begin{defi}
+  The sequence \(\{a_n\}_{n=k}^\infty\) is called \de{convergent} if
+  \\
+
+  The sequence is called \de{divergent} if 
+\end{defi}
+\begin{thrm}
+  The ``limit laws''  hold for sequences as well: Assume \[
+    \lim_{n \to \infty} a_n = A < \infty \text{ and } \lim_{n \to
+      \infty} b_n = B < \infty
+  \]
+  \begin{enumerate}
+  \item For \(c\) a constant, \(\lim_{n \to \infty} ca_n = \)
+  \item \(\lim_{n \to \infty} (a_n \pm b_n) = \)
+  \item \(\lim_{n \to \infty} a_n b_n = \)
+  \item \(\lim_{n \to \infty} \frac{a_n}{b_n} = \)
+  \end{enumerate}
+\end{thrm}
+\vspace{-1in}
+\begin{ex}
+  Determine if the following sequences converge or diverge. If the
+  converge, give the limit.
+  \begin{enumerate}
+  \item \(\{a_n\} = \left\{ \left(\frac{1}{2}\right)^n \right\}\)
+  \item \(\{b_n\} = \left\{ \frac{2n^2+n}{3n^2+1} \right\}\)
+  \item \(\{c_n\} = \left\{ \frac{2n^2+n}{3n^3+1} \right\}\)
+  \item \(\{d_n\} = \left\{ \frac{2n^2+n}{3\sqrt{n}+1} \right\}\)
+  \end{enumerate}
+\end{ex}
+\vspace{-2in}
+\begin{thrm}
+  The rate of growth of \(n! \gg e^n \gg n^k\). In other words
+  \begin{itemize}
+  \item \(\lim_{n \to \infty} \frac{e^n}{n!} = 0 = \lim_{n \to \infty}
+    \frac{n^k}{n!} = \lim_{n \to \infty} \frac{n^k}{e^n}\)
+  \item \(\lim_{n \to \infty} \frac{n!}{e^n}, \lim_{n \to \infty}
+    \frac{n!}{n^k},\) and \(\lim_{n \to \infty} \frac{e^n}{n^k}\) all
+    do not exist and the corresponding sequences tend towards infinity.
+  \end{itemize}
+\end{thrm}
+\vspace{-1in}
+\begin{ex}
+  Of the microprocessors manufactured by a microelectronics firm for
+  use in regularing fuel consumption in automobiles, \(1.5\%\) are
+  defective. It can be shown that the probability of getting at least
+  one defective microprocessor in a random sample of \(n\)
+  microprocessors is \(f(n) = 1-(0.985)^n\). Consider the sequence
+  \(\{a_n\}\) defined by \(a_n = f(n)\). What is \(\lim_{n \to \infty}
+  a_n\) and interpret the result.
+\end{ex}
+\vspace{-1in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 11.3+11.4: Series and Series with Positive Terms} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ex}
+  Find the sum \(\sum_{n=1}^\infty \left( \frac{2}{n^2+n} +
+    \frac{3}{2^n} \right)\).
+\end{ex}
+\begin{defi}
+  The \de{Harmonic series} is the series
+\end{defi}
+\begin{thrm}
+  \begin{enumerate}
+  \item If \(\sum_{n=1}^\infty a_n\) converges, then \(\lim_{n \to
+      \infty} = \)
+  \item (Test for Divergence) If \(\lim_{n \to \infty} a_n\) does not exist or \(\lim_{n \to
+    \infty} a_n \neq 0\), then \(\sum_{n=1}^\infty a_n\)
+  \end{enumerate}
+\end{thrm}
+\begin{ex}
+  Determine if \(\sum_{n=1}^\infty e^{\sin(n\pi)}\) converges.
+\end{ex}
+Other series to know and try at home: \(\sum_{n=1}^\infty (-1)^n,
+\sum_{n=1}^\infty (-1)^n \frac{n^2}{n^2+1}, \sum_{n=1}^\infty
+\frac{n}{\sqrt{2n^2+10}}, \sum_{n=1}^\infty \tan(n)\).
+\begin{thrm}
+  (Integral Test). Suppose \(f\) is a continuous, positive, and decreasing function on
+  \([k,\infty)\). If \(f(n) = a_n\) for all integers \(n \geq k\), then 
+\end{thrm}
+\begin{ex}
+  Use the integral test to show that the Harmonic series is
+  divergent. In general, for \(p\) a constant, use the integral
+  testto deduce the 
+  convergence of  \[
+    \sum_{n=1}^\infty \frac{1}{n^p}
+  \]
+\end{ex}
+\begin{thrm}
+  (The Comparison Test) Suppose \(\sum_{n=k}^\infty a_n\) and
+  \(\sum_{n=k}^\infty b_n\) are series with positive terms.
+  \begin{enumerate}
+  \item If \(\sum_{n=k}^\infty b_n\) is convergent and \(a_n \leq
+    b_n\) for all \(n\), then \(\sum_{n=k}^\infty a_n\)
+  \item If \(\sum_{n=k}^\infty b_n\) is divergent and \(a_n \geq b_n\)
+    for all \(n\), then \(\sum_{n=k}^\infty a_n\)
+  \end{enumerate}
+\end{thrm}
+\begin{ex}
+  Determine the convergence of
+  \begin{enumerate}
+  \item \(\sum_{n=1}^\infty \frac{1}{n^{1/3}-0.1}\)
+  \item \(\sum_{n=0}^\infty \frac{2^n}{3^n + 2}\)
+  \end{enumerate}
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
