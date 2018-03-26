@@ -1,0 +1,60 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 11.5 Part 2: Power Series and Taylor Series} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defn}
+  The \de{Taylor series} of \(f(x)\) at \(x=a\) is a power series 
+\end{defn}
+\vspace{0.25in}
+\begin{ex}
+  Find the Taylor series of
+  \begin{enumerate}
+  \item \(f(x) = \frac{1}{x-1}\) at \(x=2\)
+    \vspace{2in}
+  \item \(f(x) = \ln(1+x)\) at \(x=0\)
+  \end{enumerate}
+\end{ex}
+\begin{defn}
+  The \de{Maclaurin series} of \(f(x)\) is 
+\end{defn}
+\vspace{0.25in}
+\pagebreak
+\begin{ex}
+  Find the Maclaurin series of \(f(x) = xe^x\).
+\end{ex}
+\begin{ex}
+  The following are common Maclaurin series which you should
+  know. Convince yourself of them at home!
+  \begin{enumerate}
+  \item \(e^x = \sum_{n=0}^\infty\)
+  \item \(\ln(1+x) = \sum_{n=1}^\infty\)
+  \item \(\sin(x) = \sum_{n=0}^\infty\)
+  \item \(\cos(x) = \sum_{n=0}^\infty\)
+  \item \(\frac{1}{1-x} = \sum_{n=0}^\infty\)
+  \end{enumerate}
+\end{ex}
+\vspace{-2in}
+\begin{thrm}
+  If \(\sum_{n=0}^\infty a_n(x-a)^n\) represents \(f(x)\) at \(x=a\),
+  then \[
+    \frac{d}{dx} \sum_{n=0} a_n(x-a)^n = \hspace{5in}
+  \]
+\end{thrm}
+\begin{thrm}
+  If \(\sum_{n=0}^\infty a_n (x-a)^n\) represents \(f(x)\) at \(x=a\),
+  then \(a_n = \)
+\end{thrm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}

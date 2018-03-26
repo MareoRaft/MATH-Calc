@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Sections 11.1+11.6: Taylor Polynomials and More
+  Taylor Series} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  The \(N\)th Taylor polynomial \(P_N(x)\) of \(f(x)\) at \(x=a\) is 
+\end{defi}
+\begin{ex}
+  Find the 2nd Taylor polynomial of \(f(x) = e^x\) at \(x=0\) and use it to
+  approximate the decimal value of \(e\).
+\end{ex}
+\begin{ex}
+  Find \(P_2(x)\) for \(f(x) = e^{-\frac{1}{2}x^2}\) at \(x=0\). Use
+  \(P_2(x)\) to approximate \(P(0 < Z < 1)\) for standard normal RV \(Z\).
+\end{ex}
+\pagebreak
+\begin{thrm}
+  If \(f(x) = \sum a_n x^n\) on interval of convergence \((-R < x <
+  R)\), then \[
+    f(u(x)) = \hspace{1in}
+  \]
+\end{thrm}
+\vspace{-0.75in}
+\begin{ex}
+  Find the Maclaurin series of the following functions and their
+  intervals of convergence
+  \begin{enumerate}
+  \item \(f(x) = \frac{1}{1-2x}\)
+    \vspace{1.5in}
+  \item \(f(x) = e^{x^5}\)
+  \end{enumerate}
+\end{ex}
+\vspace{-0.5in}
+\begin{thrm}
+  If \(f(x) = \sum a_n x^n\) on interval of convergence \(I\), then \[
+    x^p f(x) = \hspace{1in}
+  \]
+\end{thrm}
+\vspace{-0.5in}
+\begin{ex}
+  Find the Maclaurin series of the following functions and their
+  intervals of convergence
+  \begin{enumerate}
+  \item \(f(x) = \frac{x^3}{1-2x}\)
+    \vspace{1in}
+  \item \(f(x) = \frac{\ln(x+1)}{x}\)
+  \end{enumerate}
+
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}

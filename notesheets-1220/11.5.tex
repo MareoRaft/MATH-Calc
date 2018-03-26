@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 11.5: Power Series and Taylor Series} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{rmk}
+  Recall that, for a differential function \(f(x)\), we can
+  \emph{approximate} \(f(x)\) near \(x=a\) with the \emph{linear equation} \[
+    f(x) \approx f(a) + f'(a)(x-a)
+  \]
+  We want to take this idea further.
+\end{rmk}
+\begin{defn}
+  A \de{power series} centered at \(x=a\) is a series of the form
+\end{defn}
+\vspace{0.5in}
+\begin{ex}
+  Are the following series power series?
+  \begin{enumerate}
+  \item \(\sum_{n=0}^\infty x^n\)
+  \item \(\sum_{n=0}^\infty x^{n-1}\)
+  \item \(\sum_{n=0}^\infty x^2(x-1)^n\)
+  \end{enumerate}
+\end{ex}
+\vspace{-2in}
+\begin{ex}
+  When is \(\sum_{n=0}^\infty x^n\) convergent and when is it divergent?
+\end{ex}
+\pagebreak
+\begin{defn}
+  \begin{enumerate}
+  \item The \de{interval of convergence} (IoC) for a power series
+    \vspace{0.75in}
+  \item The \de{radius of convergence} (RoC) is defined to be
+    \vspace{0.5in}
+  \end{enumerate}
+\end{defn}
+\begin{thrm}
+  The radius of convergence for \(\sum_{n=0}^\infty a_n(x-a)^n\) is
+  given by \[
+    R = 
+  \]
+\end{thrm}
+\begin{ex}
+  Find the radius of convergence and the interval of convergence for
+  the following power series:
+  \begin{enumerate}
+  \item \(\sum_{n=0}^\infty x^n\)
+    \vspace{0.5in}
+  \item \(\sum_{n=0}^\infty n! (x-1)^n\)
+    \vspace{0.5in}
+  \item \(\sum_{n=0}^\infty \frac{n^3(x+1)^n}{(n+1)!}\)
+    \vspace{0.5in}
+  \item \(\sum_{n=0}^\infty (2x+6)^n\)
+  \end{enumerate}
+\end{ex}
+\vspace{-1.5in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
