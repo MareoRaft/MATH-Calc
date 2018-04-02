@@ -1,0 +1,149 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{todonotes}
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "l" column type
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\author{Math 1220}
+\title{Series Worksheet}
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.5in}
+\begin{defi}
+  Way back in chapter \(7\), we defined the improper integral:
+  \[ \int_a^\infty f(x) \dx = \lim_{b \to \infty} \int_a^b f(x) \dx
+    \text{ is }
+    \begin{cases}
+      \text{Convergent if the limit exists}\\
+      \text{Divergent otherwise}
+    \end{cases}
+  \]
+  Let \(\{a_n\}_{n=k}^\infty\) be a sequence. Recall from \(8.3\) that
+  we say
+  \[ \sum_{n=k}^\infty a_n = \lim_{N \to \infty} \sum_{n=k}^N a_n
+    \text{ is }
+    \begin{cases}
+      \text{Convergent if the limit exists}\\
+      \text{Divergent otherwise}
+    \end{cases}
+  \]
+\end{defi}
+\vspace{-1.4in}
+\begin{ex}
+  For the following sequences, complete the the following: \(
+  \sum_{n=1}^1 a_n, \sum_{n=1}^2 a_n, \sum_{n=1}^5 a_n, \sum_{n=1}^N
+  a_n\) (simplify this last expression if you can) \[
+    (i) a_n = \frac{1}{n}-\frac{1}{n+2} \ (ii)\ a_n = \frac{1}{n^2+2n}, \ (iii)\ a_n = \frac{5}{2^n}, \ (iv)\
+    a_n = \frac{2}{n^2}, \ (v)\ a_n = 2^n
+  \]
+  Then, if you can, find both \(\lim_{n \to \infty} a_n\) and
+  \(\sum_{n=1}^\infty a_n = \lim_{N \to \infty} 
+  \sum_{n=1}^N a_n\) for 
+  the above sequences.
+\end{ex}
+\vspace{-2.5in}
+\begin{ex}
+  Consider the infinite series \[
+    \sum_{n=0}^\infty r^n = 1+r+r^2+r^3+r^4+\cdots
+  \]
+  Now, (a) compute \[
+    \left( \sum_{n=0}^N r^n \right) - r \left( \sum_{n=0}^N r^n \right)
+  \]
+  and then (b) take \(\lim_{N \to \infty}\) of your expression. Note
+  that we can now use this technique. For example \[
+    \sum_{n=1}^\infty \frac{5}{2^n} = \frac{5}{2} + \frac{5}{4} +
+    \frac{5}{8} + \cdots = \frac{5}{2}\left(
+      \underbrace{1+\frac{1}{2}+\frac{1}{4}+\cdots}_{\text{Use
+          identity with }r=1/2} \right)
+  \]
+\end{ex}
+\vspace{-2.2in}
+\begin{ex}
+  By writing out the series and manipulating them or canceling them,
+  evaluate the series and say whether the series is
+  convergent/divergent.\[
+    (i)\ \sum_{n=0}^\infty \frac{5^{n+1}}{7^n}, (ii)\
+    \sum_{n=0}^\infty -5 \left(\frac{2}{3}\right)^n, (iii)\
+    \sum_{n=0}^\infty \left( \frac{2}{3} \right)^n, (iv)\
+    \sum_{n=1}^\infty \left( \frac{2}{3} \right)^n, (v)\
+    \sum_{n=1}^\infty \left( \frac{2}{3} \right)^{2n}, (vi)
+    \sum_{n=100}^\infty \left( \frac{2}{3} \right)^n 
+  \]
+\end{ex}
+\vspace{-2in}
+\begin{defi}
+  Remember that a \(p\)-series has the following rule for \(p\) some constant: \[
+    \sum_{n=1}^\infty \frac{1}{n^p} \text{ will }
+    \begin{cases}
+      \text{converge if }p>1\\
+      \text{diverge if }p\leq 1
+    \end{cases}
+  \]
+  The \emph{Harmonic series}, \(\sum_{n=1}^\infty \frac{1}{n}\) is a
+  special case of this situation with \(p=1\), and is therefore
+  divergent, thus, \[
+    \lim_{n \to \infty} \frac{1}{n} = 0 \text{ but } \lim_{N \to
+      \infty} \sum_{n=1}^N \frac{1}{n} = \infty / \text{DNE}
+  \]
+\end{defi}
+\vspace{-1in}
+\begin{ex}
+  Determine if the following series converge/diverge: \[
+    (i)\ \sum_{n=1}^\infty \frac{1}{n^5}, (ii)\ \sum_{n=2}^\infty
+    \frac{1}{n^5}, (iii)\ \sum_{n=1}^\infty \frac{1}{\sqrt{n}}, (iv)\
+    \sum_{n=1}^\infty \frac{1}{n^{1.00000001}}, (v)\ \sum_{n=1}^\infty \frac{(n+1)(n+2)}{n^3}
+  \]
+\end{ex}
+\vspace{-2.3in}
+\begin{thrm}
+  Remember also the integral test, which says, given sequence
+  \(\{a_n\}_{n=k}^\infty\) and continuous, positive, decreasing
+  function \(f(x)\) such that \(f(n)=a_n\) for \(n \geq k\), then \[
+    \sum_{n=k}^\infty a_n \text{ and }
+    \int_k^\infty f(x) \dx 
+  \]
+  both ``do the same thing'' in terms of convergence/divergence.
+\end{thrm}
+\vspace{-1in}
+\begin{ex}
+  Figure out if the following series converge/diverge using the
+  integral test.\[
+    (i)\ \sum_{n=0}^\infty ne^{-n^2}, (ii)\
+    \sum_{n=2}^\infty\frac{1}{n\ln n}, (iii)\ \sum_{n=2}^\infty
+    \frac{1}{n(\ln n)^3}, (iv)\ \sum_{n=3}^\infty \frac{n^2}{e^n}
+  \]
+\end{ex}
+\vspace{-2in}
+\begin{ex}
+  Use the comparison test to figure out if the following series
+  converge/diverge \[
+    (i)\ \sum_{n=1}^\infty \frac{4+3^n}{2^n}, (ii)\ \sum_{n=1}^\infty
+    \frac{n^2-1}{3n^4+1}, (iii)\ \sum_{n=1}^\infty
+    \frac{1}{\sqrt{n^2+1}}, (iv)\ \sum_{n=1}^\infty \frac{\ln n}{n},
+    (v) \sum_{n=1}^\infty \frac{\sin^2 n}{n^3}
+  \]
+\end{ex}
+\vspace{-2.25in}
+\begin{ex}
+  (Old Exam Series) Determine whether each of the following series
+  converges/diverges. If the series converges, compute its sum.\[
+    (i)\ \sum_{n=2}^\infty \left( \frac{1}{(\ln n)^2} -
+      \frac{1}{(\ln(n+1))^2} \right), (ii)\ \sum_{n=0}^\infty
+    \frac{e-(-2)^n}{3^n}, (iii)\ \sum_{n=5}^\infty \frac{4^{n+2}}{5^n}
+  \]
+\end{ex}
+\vspace{-2.5in}
+\begin{ex}
+  (Old Exam Series) Determine whether each of the following series
+  converges/diverges. \[
+    (i)\ \sum_{n=1}^\infty \frac{2}{n^e}, (ii)\ \sum_{n=2}^\infty
+    \frac{1}{n^{1/3}-1}, (iii)\ \frac{6n}{n^2+1}, (iv)\
+    \sum_{n=2}^\infty \frac{5}{n\sqrt{n^3+5}}, (v)\ \sum_{n=1} \frac{n^2}{n(n+1)}
+  \]
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
