@@ -1,0 +1,49 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 11.6 Part II: More
+  Taylor Series} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{thrm}
+  Given a function \(f(x)\) such that \(f(x) = \sum_{n=0}^\infty a_n
+  x^n\) on some interval \(I\), then
+  \begin{enumerate}
+  \item \(\frac{d}{dx} f(x) = \)
+  \item \(\int f(x)\ dx = \)
+  \end{enumerate}
+\end{thrm}
+\begin{ex}
+  Find the Maclaurin series of the following series using the theorem above.   \begin{enumerate}
+  \item \(\frac{1}{(1-2x)^2}\). (Hint: use what
+  you know from challenges \(5\) and \(7\) on the ``11.1+11.6''
+  notesheet.) \\
+  \vspace{2in}
+  \item \(\ln(1+x^2)\) from the power series for \(\frac{x}{1+x^2}\).
+  \end{enumerate}
+\end{ex}
+\begin{ex}
+  Sometimes you can ``recenter'' a Taylor series.
+  \begin{enumerate}
+  \item Find the Taylor series of \(e^x\) at \(x=1\) using the
+    Maclaurin series \(e^x = \sum_{n=0}^\infty \frac{x^n}{n!}\)
+    \vspace{2in}
+  \item Find the Taylor series of \(\ln(2+3x)\) at \(x=10\)
+    \vspace{2in}
+  \item Find the Taylor series of \(\frac{x+5}{2+3x}\) at \(x=-5\)
+    \vspace{2in}
+  \item Find the Taylor series of \(\frac{2}{x}\) at \(x=2\)
+  \end{enumerate}
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

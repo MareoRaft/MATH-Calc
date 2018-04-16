@@ -1,0 +1,93 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 9.1: Differential Equations} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  \begin{itemize}
+  \item A \de{differential equation} is an equation involving
+    \vspace{0.5in}
+  \item A \de{solution} of a differential equation is
+    \vspace{0.5in}
+  \item A \de{general solution} of a differential equations is
+    \vspace{0.5in}
+  \item A \de{particular solution} is 
+  \end{itemize}
+\end{defi}
+\begin{ex}
+  Consider the differential equation \(y+y'' = 0\) (from the ``trig
+  identity homework'').
+  \begin{enumerate}
+  \item What are \(3\) solutions to this differential equation?
+    \vspace{1in}
+  \item What is the general solution to this differential equation?
+  \end{enumerate}
+\end{ex}
+\vspace{-1in}
+\begin{defi}
+  An \de{initial value problem (IVP)} is problem that requires solving
+  a differential equation with some ``initial conditions.''
+\end{defi}
+\begin{ex}
+  \begin{enumerate}
+  \item   Given that \(y=Ce^{-x}+x-1\) is a general solution of \(y'+y=x\),
+  find the particular solution of the IVP \[
+    y'+y=x \text{ and } y(0) = 2
+  \]
+  \vspace{1in}
+  \item Given that \(y=C_1 x^3 + C_2x^2\) is a general solution of
+    \(x^2y''-4xy'+6y = 0\), find the particular solution of the IVP \[
+      x^2y''-4xy'+6y = 0, y(2) = 0, y'(2) = 4
+    \]
+  \end{enumerate}
+\end{ex}
+\vspace{-1in}
+\begin{thrm}
+  Let \(Q(t)\) be the amount of some quantity at time \(t\). Recall
+  tha the rate of change of \(Q\) is given by \(\frac{dQ}{dt}\). Then,
+  \begin{enumerate}
+  \item \(Q\) increases (decreases) at a fixed rate \(k \iff
+    \frac{dQ}{dt} = \)
+  \item \(Q\) grows (decays) at a rate proportional to some quantity \(A \iff
+    \frac{dQ}{dt} = \)
+  \item \(Q\) grows (decays) at a rate jointly proportional to \(A\) and \(B
+    \iff \frac{dQ}{dt} =\)
+  \end{enumerate}
+\end{thrm}
+\vspace{-1in}
+\begin{ex}
+  Write out (but do not solve) an initial value problem for each of
+  the following situations.
+  \begin{enumerate}
+  \item The world population at the beginning of \(2018\) was \(7.6\)
+    billion. Setup a model for the world population over time assuming
+    that the 
+    population will continue to grow at a 
+    rate of approximately \(2\%\) per year.
+    \vspace{0.25in}
+  \item A radioactive substance decays at a rate directly proportional
+    to the current mass of the substance. Setup a model for the mass
+    of the substace over time assuming that you start with \(10\)
+    grams.
+    \vspace{0.25in}
+  \item During a flu epidemic, \(5\%\) of \(300\) Math 1220 students
+    have contracted influenza at time \(t=0\). The rate at which they
+    contract influenza is jointly proportional to the number of
+    students who already have influenze and the number of students who
+    have yet to be infected. \(20\%\) of students have contracted the
+    flu by the \(10\)th day. 
+  \end{enumerate}
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
