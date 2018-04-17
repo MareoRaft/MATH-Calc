@@ -1,0 +1,54 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 9.2: Separation of Variables} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}
+  A \de{separable} differential equations is a differential equation
+  that can be written in the form \[
+    \frac{dy}{dx} = 
+  \]
+\end{defi}
+\begin{thrm}
+  To solve a separable differential equation, we solve \[
+    \int \frac{dy}{g(y)} = \int f(x)\dx
+  \]
+\end{thrm}
+\begin{ex}
+  Solve the following differential equations using the method of
+  separation of variables
+  \begin{enumerate}
+  \item \(y'=xy^2\)
+    \vspace{2in}
+  \item \(y' = \frac{6x^2}{2y+\cos(y)}\)
+    \vspace{2in}
+  \item \(y'=\frac{y}{x}\)
+    \vspace{2in}
+  \item \(y' = \frac{xy}{x^2+1}, y(0)=1\)
+  \end{enumerate}
+\end{ex}
+\vspace{1in}
+\begin{ex}
+  A radio active isotype has initial mass \(100\)g. It decays at a
+  rate proportional to its current mass and \(5\) years later, its
+  mass is \(60\)g.
+  \begin{enumerate}
+  \item Find an expression giving \(Q(t)\), that is, the amount of the
+    isotope (in grams) after \(t\) years.
+  \item Find the half-life of this isotype, ie, find \(T\) such that
+    \(Q(T) = \frac{1}{2}Q(0)\).
+  \end{enumerate}
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
