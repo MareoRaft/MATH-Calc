@@ -1,0 +1,40 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 9.3: Applications of Separable Differential Equations} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ex}
+  Suppose a country's population \(P(t)\) at time \(t\) is modeled
+  by \[
+    \frac{dP}{dt} = 2P+10
+  \]
+  Find an expression for \(P(t)\) if \(P(0)=1,000,000\).
+\end{ex}
+\begin{ex}
+  Suppose that the population \(Q(t)\) of fruit flies in a controlled
+  in a controlled environment is increasing by the rule \[
+    \frac{dQ}{dt} = kQ(500-Q)
+  \]
+  If the initial population is \(10\) and it grows to \(100\) after
+  \(2\) days, find the population after \(10\) days.
+\end{ex}
+\pagebreak
+\begin{ex}
+  Solve the IVP \[
+    \frac{dx}{dt} = k(L-x), x(0)=x_0
+  \]
+  where \(k,L,x_0\) are constant and \(x = x(t)\) is a function in \(t\).
+\end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
