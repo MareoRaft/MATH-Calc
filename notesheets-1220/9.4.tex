@@ -1,0 +1,73 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../notesheets}
+\usepackage{epsdice}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\Var}{\operatorname{Var}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Math 1220}
+\title{Notesheet. Section 9.4: Euler's Method} 
+\date{}
+
+\begin{document}
+\maketitle
+\nameline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We cannot solve every \(1\)st order differential equation of the
+form \[
+  y' = F(x,y)
+\]
+However, given a specific point, we know the slope of the tangent line
+of the solution \(y(x)\) passing through any given point
+\((x_0,y_0)\).\\
+\begin{tikzpicture}
+   \tkzInit[xmax=5,ymax=5,xmin=0,ymin=0]
+   \tkzGrid
+   \tkzAxeXY
+ \end{tikzpicture}\hspace{2in}
+ \begin{tikzpicture}
+   \tkzInit[xmax=5,ymax=5,xmin=0,ymin=0]
+   \tkzGrid
+   \tkzAxeXY
+ \end{tikzpicture}
+ 
+ Using this information, we can approximate solutions to the IVP \[
+   y' = F(x,y), y(x_0) = y_0
+ \]
+ \begin{ex}
+   Approximate the value of \(y(4)\) where \(y(x)\) is
+   the solution to the IVP \[
+     y'=x-y, y(0) = 1
+   \]
+ \end{ex}
+\pagebreak
+ \begin{thrm}[Euler's Method]
+   Given a first order \(IVP\) of the form \[
+     y' = F(x,y), \ y(x_0) = y_0
+   \]
+   we can approximate \(y(b)\) in \(n\) steps by
+   \begin{enumerate}[label=(\roman*)]
+   \item Finding the step size \(h = \frac{b-x_0}{n}\)
+   \item Determining the \(x\)-values \(x_i = x_{i-1}+h\) for \(1 \leq
+     i \leq n\). \vspace{0.5in}
+   \item Determining the \(y\)-values \[
+       \begin{cases}
+         y_1 = \\
+         y_2 = \\
+         \vdots\\
+         y_i = 
+       \end{cases}
+     \]
+   \end{enumerate}
+ \end{thrm}
+ \begin{ex}
+   Use Euler's method with \(n=1\), \(n=2\), and \(n=4\) to obtain an
+   approximation of the solution of the IVP \[
+     y' = xy, y(1) = 2
+   \]
+   when \(x=5\). Which approximation is the most accurate?
+ \end{ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end{document}
