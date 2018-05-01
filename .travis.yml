@@ -3,12 +3,9 @@ cache:
   directories:
   - texlive
 before_install:
-- |
-  if [[ ! -e ./texlive/bin/x86_64-linux/tlmgr ]]; then
-    wget http://mirrors.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O - | tar -x --gzip
-    mv $(ls | grep install) install-tl
-    ./install-tl/install-tl -profile texlive.profile
-  fi
+- wget http://mirrors.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O - | tar -x --gzip
+- mv $(ls | grep install) install-tl
+- ./install-tl/install-tl -profile texlive.profile
 - export PATH=$(pwd)/texlive/bin/x86_64-linux:$PATH
 - sudo apt-get install texlive-full
 - sudo apt-get install latexmk
